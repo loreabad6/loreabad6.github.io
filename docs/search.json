@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "Lore Abad",
+      "description": "About me",
+      "author": [],
+      "contents": "\r\n\r\n          \r\n          \r\n          Lore Abad\r\n          \r\n          \r\n          Posts\r\n          About\r\n          \r\n          \r\n          \r\n          \r\n          \r\n          \r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            Lore Abad\r\n          \r\n          \r\n            \r\n              I am a researcher with a background in environmental engineering and geospatial technologies. R is my go-to coding language for most of my data science and visualization tasks as well as scientific report and article writing. This blog is meant to share some tip and tricks I have learned along the way. You can reach me at any of the links below!\r\n            \r\n            \r\n              I am a researcher with a background in environmental engineering and geospatial technologies. R is my go-to coding language for most of my data science and visualization tasks as well as scientific report and article writing. This blog is meant to share some tip and tricks I have learned along the way. You can reach me at any of the links below!\r\n            \r\n          \r\n\r\n          \r\n            \r\n              \r\n                  \r\n                    \r\n                      \r\n                      Twitter\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      \r\n                      GitHub\r\n                    \r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                      \r\n                      LinkedIn\r\n                    \r\n                  \r\n                \r\n                              \r\n          \r\n\r\n          \r\n            \r\n              \r\n                                \r\n                  \r\n                    \r\n                    Twitter\r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                    GitHub\r\n                  \r\n                \r\n                                \r\n                  \r\n                    \r\n                    LinkedIn\r\n                  \r\n                \r\n                              \r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
+      "last_modified": "2021-02-26T20:31:09+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Lore Abad",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-02-26T20:31:10+01:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}

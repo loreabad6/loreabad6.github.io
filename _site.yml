@@ -1,0 +1,19 @@
+name: "loreabad6.github.io"
+title: "Lore Abad"
+collections:
+  posts:
+    share: [twitter, linkedin]
+output_dir: "docs"
+theme: lore_theme.css
+base_url: loreabad6.github.io
+navbar:
+  right:
+    - text: "Posts"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - icon: fa fa-twitter
+      href: https://twitter.com/loreabad6
+    - icon: fa fa-github
+      href: https://github.com/loreabad6
+output: distill::distill_article

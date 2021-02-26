@@ -1,0 +1,16 @@
+---
+title: "Lore Abad"
+description: "About me"
+image: "AbadL.jpg"
+links:
+  - label: '`r fontawesome::fa("twitter")` Twitter'
+    url: "https://twitter.com/loreabad6"
+  - label: '`r fontawesome::fa("github")` GitHub'
+    url: "https://github.com/loreabad6"
+  - label: '`r fontawesome::fa("linkedin")` LinkedIn'
+    url: "https://linkedin.com/in/lorena-abad/"
+output:
+  postcards::jolla
+---
+
+I am a researcher with a background in environmental engineering and geospatial technologies. R is my go-to coding language for most of my data science and visualization tasks as well as scientific report and article writing. This blog is meant to share some tip and tricks I have learned along the way. You can reach me at any of the links below!
