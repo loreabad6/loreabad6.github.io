@@ -6,7 +6,10 @@ collections:
 output_dir: "docs"
 theme: lore_theme.css
 base_url: loreabad6.github.io
+repository_url: https://github.com/loreabad6/loreabad6.github.io
 navbar:
+  search: false
+  source_url: true
   right:
     - text: "Posts"
       href: index.html
@@ -14,6 +17,4 @@ navbar:
       href: about.html
     - icon: fa fa-twitter
       href: https://twitter.com/loreabad6
-    - icon: fa fa-github
-      href: https://github.com/loreabad6
 output: distill::distill_article

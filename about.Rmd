@@ -3,11 +3,11 @@ title: "Lore Abad"
 description: "About me"
 image: "AbadL.jpg"
 links:
-  - label: '`r fontawesome::fa("twitter")` Twitter'
+  - label: '`r fontawesome::fa("twitter")`'
     url: "https://twitter.com/loreabad6"
-  - label: '`r fontawesome::fa("github")` GitHub'
+  - label: '`r fontawesome::fa("github")`'
     url: "https://github.com/loreabad6"
-  - label: '`r fontawesome::fa("linkedin")` LinkedIn'
+  - label: '`r fontawesome::fa("linkedin")`'
     url: "https://linkedin.com/in/lorena-abad/"
 output:
   postcards::jolla
