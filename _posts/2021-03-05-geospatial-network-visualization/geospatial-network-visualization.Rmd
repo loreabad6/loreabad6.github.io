@@ -13,6 +13,9 @@ categories:
   - r-spatial
   - dataviz
   - networks
+preview: figs/preview.png
+twitter:
+  creator: "@loreabad6"
 draft: false
 ---
 
