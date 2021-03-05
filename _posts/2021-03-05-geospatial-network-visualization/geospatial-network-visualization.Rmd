@@ -15,6 +15,7 @@ categories:
   - networks
 preview: figs/preview.png
 twitter:
+  site: "@loreabad6"
   creator: "@loreabad6"
 draft: false
 ---
@@ -35,12 +36,15 @@ old_hooks <- fansi::set_knit_hooks(knitr::knit_hooks,
 which = c("output", "message", "error"))
 ```
 
+# Welcome to my website!
+This is the first entry for my brand new website built with `distill`. I hope you find this and hopefully the coming posts useful! So let's get to it!
+
+# What is this about?
+
 <center>
 <a href="https://luukvdmeer.github.io/sfnetworks/"><img src="https://raw.githubusercontent.com/luukvdmeer/sfnetworks/master/man/figures/logo.png" width="150px"/></a> 
 <a href="https://ggraph.data-imaginist.com/"><img src="https://raw.githubusercontent.com/thomasp85/ggraph/master/man/figures/logo.png" width="150px"/></a>
 </center>
-
-# What is this about?
 
 This post is to document my personal exploration on how to visualize spatial networks created with `sfnetworks` using `ggraph`. This all started with a [sfnetworks hackathon](https://github.com/sfnetworks/sfnetworks_viz){target="_blank"} and should end with a successful pull request (PR) to `ggraph`. 
 

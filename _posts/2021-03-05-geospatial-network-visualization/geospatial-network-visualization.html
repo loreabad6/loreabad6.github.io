@@ -106,13 +106,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Geospatial Network Visualization"/>
   <meta property="twitter:description" content="{sfnetworks} meets {ggraph}"/>
+  <meta property="twitter:site" content="@loreabad6"/>
   <meta property="twitter:creator" content="@loreabad6"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","twitter","draft"]}},"value":[{"type":"character","attributes":{},"value":["Geospatial Network Visualization"]},{"type":"character","attributes":{},"value":["{sfnetworks} meets {ggraph}"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lorena Abad"]}]}]},{"type":"character","attributes":{},"value":["03-05-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["r-spatial","dataviz","networks"]},{"type":"character","attributes":{},"value":["figs/preview.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@loreabad6"]}]},{"type":"logical","attributes":{},"value":[false]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","preview","twitter","draft"]}},"value":[{"type":"character","attributes":{},"value":["Geospatial Network Visualization"]},{"type":"character","attributes":{},"value":["{sfnetworks} meets {ggraph}"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lorena Abad"]}]}]},{"type":"character","attributes":{},"value":["03-05-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["r-spatial","dataviz","networks"]},{"type":"character","attributes":{},"value":["figs/preview.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["site","creator"]}},"value":[{"type":"character","attributes":{},"value":["@loreabad6"]},{"type":"character","attributes":{},"value":["@loreabad6"]}]},{"type":"logical","attributes":{},"value":[false]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1489,6 +1490,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
+<li><a href="#welcome-to-my-website">Welcome to my website!</a></li>
 <li><a href="#what-is-this-about">What is this about?</a></li>
 <li><a href="#what-can-be-done">What can be done?</a></li>
 <li><a href="#the-three-pillars">The Three Pillars</a>
@@ -1507,10 +1509,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 PRE.fansi SPAN {padding-top: .25em; padding-bottom: .25em};
 </STYLE>
 </div>
+<h1 id="welcome-to-my-website">Welcome to my website!</h1>
+<p>This is the first entry for my brand new website built with <code>distill</code>. I hope you find this and hopefully the coming posts useful! So let’s get to it!</p>
+<h1 id="what-is-this-about">What is this about?</h1>
 <center>
 <a href="https://luukvdmeer.github.io/sfnetworks/"><img src="https://raw.githubusercontent.com/luukvdmeer/sfnetworks/master/man/figures/logo.png" width="150px"/></a> <a href="https://ggraph.data-imaginist.com/"><img src="https://raw.githubusercontent.com/thomasp85/ggraph/master/man/figures/logo.png" width="150px"/></a>
 </center>
-<h1 id="what-is-this-about">What is this about?</h1>
 <p>This post is to document my personal exploration on how to visualize spatial networks created with <code>sfnetworks</code> using <code>ggraph</code>. This all started with a <a href="https://github.com/sfnetworks/sfnetworks_viz" target="_blank">sfnetworks hackathon</a> and should end with a successful pull request (PR) to <code>ggraph</code>.</p>
 <p>I should start by saying, that it is probably a good idea to get familiar with <code>ggraph</code> (and <code>tidygraph</code> and <code>sfnetworks</code> while you are at it!) before going through this post.</p>
 <p>If you are already a <code>ggraph</code> + <code>tidygraph</code> user and would like to apply the possibilities to the <em>spatial domain</em>, then this is definitely a resource for you and a good opportunity to learn about sfnetworks!</p>
