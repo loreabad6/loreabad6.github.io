@@ -92,8 +92,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-03-03"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-03-03"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-03-05"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-03-05"/>
   <meta name="article:author" content="Lorena Abad"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -111,7 +111,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","draft"]}},"value":[{"type":"character","attributes":{},"value":["Geospatial Network Visualization"]},{"type":"character","attributes":{},"value":["{sfnetworks} meets {ggraph}"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lorena Abad"]}]}]},{"type":"character","attributes":{},"value":["03-03-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["r-spatial","dataviz","networks"]},{"type":"logical","attributes":{},"value":[false]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","draft"]}},"value":[{"type":"character","attributes":{},"value":["Geospatial Network Visualization"]},{"type":"character","attributes":{},"value":["{sfnetworks} meets {ggraph}"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lorena Abad"]}]}]},{"type":"character","attributes":{},"value":["03-05-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["r-spatial","dataviz","networks"]},{"type":"logical","attributes":{},"value":[false]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1455,7 +1455,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Geospatial Network Visualization","description":"{sfnetworks} meets {ggraph}","authors":[{"author":"Lorena Abad","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-03T00:00:00.000+01:00","citationText":"Abad, 2021"}
+{"title":"Geospatial Network Visualization","description":"{sfnetworks} meets {ggraph}","authors":[{"author":"Lorena Abad","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-05T00:00:00.000+01:00","citationText":"Abad, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1480,7 +1480,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   Lorena Abad
   
-<br/>03-03-2021
+<br/>03-05-2021
 </div>
 
 <div class="d-article">
@@ -1510,7 +1510,7 @@ PRE.fansi SPAN {padding-top: .25em; padding-bottom: .25em};
 <a href="https://luukvdmeer.github.io/sfnetworks/"><img src="https://raw.githubusercontent.com/luukvdmeer/sfnetworks/master/man/figures/logo.png" width="150px"/></a> <a href="https://ggraph.data-imaginist.com/"><img src="https://raw.githubusercontent.com/thomasp85/ggraph/master/man/figures/logo.png" width="150px"/></a>
 </center>
 <h1 id="what-is-this-about">What is this about?</h1>
-<p>This post is to document my personal exploration on how to visualize spatial networks created with <code>sfnetworks</code> using <code>ggraph</code>. This all started with a <a href="https://github.com/sfnetworks/sfnetworks_viz">sfnetworks hackathon</a> and should end with a successful pull request (PR) to <code>ggraph</code>.</p>
+<p>This post is to document my personal exploration on how to visualize spatial networks created with <code>sfnetworks</code> using <code>ggraph</code>. This all started with a <a href="https://github.com/sfnetworks/sfnetworks_viz" target="_blank">sfnetworks hackathon</a> and should end with a successful pull request (PR) to <code>ggraph</code>.</p>
 <p>I should start by saying, that it is probably a good idea to get familiar with <code>ggraph</code> (and <code>tidygraph</code> and <code>sfnetworks</code> while you are at it!) before going through this post.</p>
 <p>If you are already a <code>ggraph</code> + <code>tidygraph</code> user and would like to apply the possibilities to the <em>spatial domain</em>, then this is definitely a resource for you and a good opportunity to learn about sfnetworks!</p>
 <h1 id="what-can-be-done">What can be done?</h1>
@@ -1540,7 +1540,7 @@ PRE.fansi SPAN {padding-top: .25em; padding-bottom: .25em};
 </ol>
 <p>Let’s go through the possibilities to combine these elements with <code>sfnetwork</code> objects.</p>
 <h2 id="layout_sf">1. <code>layout_sf()</code></h2>
-<p>As mentioned before, a <em>layout</em> is basically the physical representation of where to place our nodes. When we are dealing with non-spatial network representations we must remember that the nodes are not meant to represent actual locations on Earth, but can be placed anywhere. ggraph provides several algorithms to make this happen. Let’s take one of the examples in the <a href="https://ggraph.data-imaginist.com/articles/Layouts.html">ggraph layout vignette</a> to illustrate. This will include the <em>layout</em> + <em>nodes</em> + <em>edges</em> in a non-geographical representation.</p>
+<p>As mentioned before, a <em>layout</em> is basically the physical representation of where to place our nodes. When we are dealing with non-spatial network representations we must remember that the nodes are not meant to represent actual locations on Earth, but can be placed anywhere. ggraph provides several algorithms to make this happen. Let’s take one of the examples in the <a href="https://ggraph.data-imaginist.com/articles/Layouts.html" target="_blank">ggraph layout vignette</a> to illustrate. This will include the <em>layout</em> + <em>nodes</em> + <em>edges</em> in a non-geographical representation.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggraph.data-imaginist.com'>ggraph</a></span><span class='op'>)</span>
@@ -1658,7 +1658,7 @@ PRE.fansi SPAN {padding-top: .25em; padding-bottom: .25em};
 </div>
 <p>Much better. Now, our plot also takes into consideration the CRS and places our nodes properly.</p>
 <p>Now let’s give some aesthetics to our plot. If you scroll back up, you will see that our nodes don’t have attributes, other than their geometry, so what should we look at? What about the degree centrality of the node? This will calculate the number of incident edges for each of our nodes. We can do this with the <code>centrality_degree()</code> function in <code>tidygraph</code>.</p>
-<p>A really nice feature about <code>ggraph</code> is that we don’t need to go back to our original graph, mutate our network, save as a new object, and then call it again inside <code>ggraph()</code>. We can just call the function directly inside the <code>aes()</code>, where the calculation will be done on the fly! <a href="https://ggraph.data-imaginist.com/articles/tidygraph.html#access-to-tidygraph-algorithms-in-ggraph-code-1">Read more about it here.</a></p>
+<p>A really nice feature about <code>ggraph</code> is that we don’t need to go back to our original graph, mutate our network, save as a new object, and then call it again inside <code>ggraph()</code>. We can just call the function directly inside the <code>aes()</code>, where the calculation will be done on the fly! <a href="https://ggraph.data-imaginist.com/articles/tidygraph.html#access-to-tidygraph-algorithms-in-ggraph-code-1" target="_blank">Read more about it here.</a></p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidygraph.data-imaginist.com'>tidygraph</a></span><span class='op'>)</span>
@@ -1683,7 +1683,7 @@ PRE.fansi SPAN {padding-top: .25em; padding-bottom: .25em};
 <p>OK, probably not a real-world case scenario, but it gives an overview of what can be done!</p>
 <p>Let’s move on to the final step, and connect these nodes to each other.</p>
 <h2 id="geom_edge_">3. <code>geom_edge_*()</code></h2>
-<p>Now comes the tricky part. When we are working with graph structures in, let’s call it, “abstract” space, the connections between the nodes are basically straight lines between each <code>from</code> and <code>to</code> pair. Although <code>ggraph</code> has quite a long list to represent edges (<a href="https://ggraph.data-imaginist.com/reference/index.html#section-edges">see here</a>), the connections that I find most relevant for spatial networks are <code>geom_edge_link()</code> and <code>geom_edge_arc()</code>, which create a straight line or an arc between connected nodes.</p>
+<p>Now comes the tricky part. When we are working with graph structures in, let’s call it, “abstract” space, the connections between the nodes are basically straight lines between each <code>from</code> and <code>to</code> pair. Although <code>ggraph</code> has quite a long list to represent edges (<a href="https://ggraph.data-imaginist.com/reference/index.html#section-edges" target="_blank">see here</a>), the connections that I find most relevant for spatial networks are <code>geom_edge_link()</code> and <code>geom_edge_arc()</code>, which create a straight line or an arc between connected nodes.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://ggraph.data-imaginist.com/reference/ggraph.html'>ggraph</a></span><span class='op'>(</span><span class='va'>net</span>, <span class='va'>layout_sf</span><span class='op'>)</span> <span class='op'>+</span>
@@ -1694,7 +1694,7 @@ PRE.fansi SPAN {padding-top: .25em; padding-bottom: .25em};
 </div>
 <p><img src="geospatial-network-visualization_files/figure-html5/unnamed-chunk-12-1.png" width="624" /></p>
 </div>
-<p>Yes, I bet you are thinking this could go to <a href="https://twitter.com/accidental__aRt">accidental aRt</a>. But depending on the visualization you are creating, this <code>geom</code> can come in handy for some data cases, you can see it in action at <a href="#show-me-more">the end of this post</a>!</p>
+<p>Yes, I bet you are thinking this could go to <a href="https://twitter.com/accidental__aRt" target="_blank">accidental aRt</a>. But depending on the visualization you are creating, this <code>geom</code> can come in handy for some data cases, you can see it in action at <a href="#show-me-more">the end of this post</a>!</p>
 <p>But now let’s look at straight lines or <em>links</em> between our nodes. We can of course pass aesthetics to all the <code>geom_edge_*()</code> functions, which refer to edge attributes. Let’s color our edges by the type of road:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1770,7 +1770,7 @@ PRE.fansi SPAN {padding-top: .25em; padding-bottom: .25em};
 </div>
 <pre><code>Error in seq_len(length(data) - 1): argument must be coercible to non-negative integer</code></pre>
 </div>
-<p>What to do then? Remember that I mention a PR? Well, I am working there to fix these issues, some of them already have a fix, others don’t. I would certainly appreciate any help I can get. I opened <a href="https://github.com/thomasp85/ggraph/issues/275">an issue</a> to illustrate the progress of my PR. Basically I am stuck with understanding <code>ggproto</code> objects to allow an integration of edges in geographical space.</p>
+<p>What to do then? Remember that I mention a PR? Well, I am working there to fix these issues, some of them already have a fix, others don’t. I would certainly appreciate any help I can get. I opened <a href="https://github.com/thomasp85/ggraph/issues/275" target="_blank">an issue</a> to illustrate the progress of my PR. Basically I am stuck with understanding <code>ggproto</code> objects to allow an integration of edges in geographical space.</p>
 <p>If you feel like exploring what I have got so far, install <code>ggraph</code> from my forked repo. Beware, this will replace the original <code>ggraph</code>, so do this under your own risk.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1779,20 +1779,27 @@ PRE.fansi SPAN {padding-top: .25em; padding-bottom: .25em};
 </div>
 </div>
 <h1 id="show-me-more">Show me more!</h1>
-<p>While testing my <code>ggraph</code> implementation, I started looking for some spatial network visualization examples done with R that I could recreate with my code. Here I added two examples of what I came up with, and will probably add more to <a href="https://github.com/loreabad6/ggraph-spatial-examples">this GitHub repository</a> if you are interested in following it up. Bear in mind that most of these examples are created with <code>remotes::install_github("loreabad6/ggraph")</code>.</p>
+<p>While testing my <code>ggraph</code> implementation, I started looking for some spatial network visualization examples done with R that I could recreate with my code. Here I added two examples of what I came up with, and will probably add more to <a href="https://github.com/loreabad6/ggraph-spatial-examples" target="_blank">this GitHub repository</a> if you are interested in following it up. Bear in mind that most of these examples are created with <code>remotes::install_github("loreabad6/ggraph")</code>.</p>
 <h3 id="break-free-from-plastic">Break Free from Plastic</h3>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="https://raw.githubusercontent.com/loreabad6/TidyTuesday/master/plot/2021_week_05.png" style="display: block; margin: auto;" /></p>
 </div>
 <aside>
-For week 5 of 2021 in the <a href="https://github.com/rfordatascience/tidytuesday">Tidy Tuesday</a> weekly data project, we analyzed data from the “Break Free from Plastic” initiative. Here is a <a href="https://github.com/loreabad6/TidyTuesday/blob/master/R/2021/week_05.md">step by step guide</a> on how to recreate the final plot.
+For week 5 of 2021 in the <a href="https://github.com/rfordatascience/tidytuesday" target="_blank">Tidy Tuesday</a> weekly data project, we analyzed data from the “Break Free from Plastic” initiative. Here is a <a href="https://github.com/loreabad6/TidyTuesday/blob/master/R/2021/week_05.md" target="_blank">step by step guide</a> on how to recreate the final plot.
 </aside>
 <h3 id="airports-in-the-u.s.">Airports in the U.S.</h3>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="https://raw.githubusercontent.com/loreabad6/ggraph-spatial-examples/main/figs/us_airports.png" width="75%" style="display: block; margin: auto;" /></p>
 </div>
 <aside>
-This example is inspired on this <a href="https://kateto.net/sunbelt2019#overlaying-networks-on-geographic-maps">wonderful blogpost on Network Visualization</a>, where I tried to recreate the last plot showing airport connections and visitors in the U.S. Here is the <a href="https://github.com/loreabad6/ggraph-spatial-examples/blob/main/code/airports.R">code to reproduce</a>.
+This example is inspired on this <a href="https://kateto.net/sunbelt2019#overlaying-networks-on-geographic-maps" target="_blank">wonderful blogpost on Network Visualization</a> by Katherine Ognyanova, where I tried to recreate the last plot showing airport connections and visitors in the U.S. Here is the <a href="https://github.com/loreabad6/ggraph-spatial-examples/blob/main/code/airports.R" target="_blank">code to reproduce</a>.
+</aside>
+<h3 id="the-fourth-way-of-visualizing-a-graph-on-a-map">The fourth way of visualizing a graph on a map</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="https://raw.githubusercontent.com/loreabad6/ggraph-spatial-examples/main/figs/graph_on_a_map.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<aside>
+In his <a href="https://datascience.blog.wzb.eu/2018/05/31/three-ways-of-visualizing-a-graph-on-a-map/" target="_blank">very helpful blogpost</a>, Markus Neteler guides us through three different ways to plot a spatial graph on a map. With the <code>ggraph</code> and <code>sfnetworks</code> combination, we can add a fourth way! <a href="https://github.com/loreabad6/ggraph-spatial-examples/blob/main/code/graph-on-a-map.R" target="_blank">Check here how to recreate this plot.</a>
 </aside>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
