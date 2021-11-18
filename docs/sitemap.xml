@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>loreabad6.github.io/about.html</loc>
-    <lastmod>2021-03-04T08:08:37+01:00</lastmod>
+    <lastmod>2021-11-18T11:48:02+01:00</lastmod>
   </url>
   <url>
     <loc>loreabad6.github.io/</loc>
-    <lastmod>2021-02-26T22:27:52+01:00</lastmod>
+    <lastmod>2021-11-18T11:48:02+01:00</lastmod>
+  </url>
+  <url>
+    <loc>loreabad6.github.io/posts/2021-11-18-foss4grspatial/</loc>
+    <lastmod>2021-11-18T13:42:45+01:00</lastmod>
   </url>
   <url>
     <loc>loreabad6.github.io/posts/2021-03-05-geospatial-network-visualization/</loc>
-    <lastmod>2021-03-21T19:43:22+01:00</lastmod>
+    <lastmod>2021-11-18T11:48:02+01:00</lastmod>
   </url>
 </urlset>
