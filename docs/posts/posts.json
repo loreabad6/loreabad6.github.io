@@ -1,5 +1,29 @@
 [
   {
+    "path": "posts/2021-11-18-foss4grspatial/",
+    "title": "FOSS4G: R-Spatial Panel",
+    "description": "I was invited to an R-Spatial Panel!",
+    "author": [
+      {
+        "name": "Lorena Abad",
+        "url": {}
+      }
+    ],
+    "date": "2021-11-18",
+    "categories": [
+      "r-spatial",
+      "dataviz",
+      "talks",
+      "foss4g"
+    ],
+    "contents": "\r\n\r\nContents\r\nFOSS4G-2021\r\nMy presentation\r\nThe panel discussion\r\n\r\nFOSS4G-2021\r\nI attended my first FOSS4G conference this year and I really loved it! The team in Buenos Aires excelled at organizing this conference, even if we could not really go to Argentina, the online mode turned out to be an amazing experience.\r\nI was very happy to be able to be part of this conference not only as an attendee, but also as a panelist for the R-Spatial session. To be honest I felt quite overwhelmed initially when the invitation was extended. Being a panelist with all those big names in R-Spatial was an honor and also scary! Nevertheless, I said yes and do not regret it one single bit!\r\nMy presentation\r\nEach of the panelist had around 10 minutes for a short presentation. I decided to talk about “Reproducible spatial data visualization with R”, where I showed how with 3 simple steps and a great pool of packages to choose from you can create nice spatial dataviz in R. See a glimpse below:\r\n\r\n\r\nYour browser does not support iframes.\r\n\r\n\r\nFull link to slides here.\r\nThe panel discussion\r\nDuring the panel, we discussed the role of R-Spatial as a new member of the OSGEO community. It was a very lively discussion, with most questions coming from the audience. Overall a great experience!\r\nHere is the video of the session:\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-11-18-foss4grspatial/figs/preview.png",
+    "last_modified": "2021-11-24T12:36:18+01:00",
+    "input_file": {},
+    "preview_width": 1683,
+    "preview_height": 1062
+  },
+  {
     "path": "posts/2021-03-05-geospatial-network-visualization/",
     "title": "Geospatial Network Visualization",
     "description": "{sfnetworks} meets {ggraph}",

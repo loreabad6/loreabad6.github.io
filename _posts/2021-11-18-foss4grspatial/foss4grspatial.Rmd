@@ -1,0 +1,52 @@
+---
+title: "FOSS4G: R-Spatial Panel"
+description: |
+  I was invited to an R-Spatial Panel!
+author: Lorena Abad
+date: 2021-11-18
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    self_contained: false
+categories:
+  - r-spatial
+  - dataviz
+  - talks
+  - foss4g
+preview: figs/preview.png
+twitter:
+  site: "@loreabad6"
+  creator: "@loreabad6"
+draft: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# FOSS4G-2021
+I attended my first FOSS4G conference this year and I really loved it! The team in Buenos Aires excelled at organizing this conference, even if we could not really go to Argentina, the online mode turned out to be an amazing experience.
+
+I was very happy to be able to be part of this conference not only as an attendee, but also as a panelist for the R-Spatial session. To be honest I felt quite overwhelmed initially when the invitation was extended. Being a panelist with all those big names in R-Spatial was an honor and also scary! Nevertheless, I said yes and do not regret it one single bit!
+
+# My presentation
+Each of the panelist had around 10 minutes for a short presentation. I decided to talk about "Reproducible spatial data visualization with R", where I showed how with 3 simple steps and a great pool of packages to choose from you can create nice spatial dataviz in R. See a glimpse below:
+
+<iframe width="580" height="400" src="https://loreabad6.github.io/foss4g/slides.html" frameborder="0">
+<p>Your browser does not support iframes.</p>
+</iframe>
+
+[Full link to slides here.](https://loreabad6.github.io/foss4g/slides.html#1)
+
+# The panel discussion
+During the panel, we discussed the role of R-Spatial as a new member of the OSGEO community. It was a very lively discussion, with most questions coming from the audience. Overall a great experience!
+
+Here is the video of the session:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iA0OQ2Icn6Y" title="FOSS4G-RSpatial Panel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
