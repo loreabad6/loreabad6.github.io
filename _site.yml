@@ -16,6 +16,8 @@ navbar:
   right:
     - text: "Posts"
       href: index.html
+    # - text: "Publications"
+    #   href: research.html
     - text: "About"
       href: about.html
     - icon: fa fa-twitter

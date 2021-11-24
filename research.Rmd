@@ -1,0 +1,27 @@
+---
+title: "Publications"
+description: "My latest publications"
+output: 
+  distill::distill_article:
+    pandoc_args: "--lua-filter=utils/multiple-bibliographies.lua"
+nocite: "@*"
+bibliography_article: utils/ARTICLE.bib
+bibliography_proceedings: utils/INPROCEEDINGS.bib
+csl: "https://csl.mendeley.com/styles/455534301/apa-riskhazardclimatelab"
+site: distill::distill_website
+---
+
+```{r, include = F}
+source("utils/split_bib.R")
+```
+
+## Journal Articles
+::: {#refs_article}
+:::
+
+&nbsp;
+&nbsp;
+
+## Conference Proceedings
+::: {#refs_proceedings}
+:::
