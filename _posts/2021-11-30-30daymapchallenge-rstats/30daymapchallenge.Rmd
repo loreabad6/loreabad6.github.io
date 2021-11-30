@@ -15,7 +15,7 @@ categories:
   - dataviz
   - 30daymapchallenge
   - rstats
-preview: figs/summary.png
+preview: https://loreabad6.github.io/posts/2021-11-30-30daymapchallenge-rstats/figs/summary.png
 twitter:
   site: "@loreabad6"
   creator: "@loreabad6"
@@ -89,9 +89,8 @@ I managed to get all of the packages I used, per script. Next tasks: summarize b
 The final result? The packages I used for each of my self-assigned categories and how many times I used them:
 
 ```{r, layout="l-body-outset"}
-knitr::include_graphics('figs/day30.png')
+knitr::include_graphics('https://raw.githubusercontent.com/loreabad6/30DayMapChallenge/main/figs/day30.png')
 ```
-
 
 *Insights:*
 
