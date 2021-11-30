@@ -5,7 +5,7 @@ collections:
     share: [twitter, linkedin]
 output_dir: "docs"
 theme: lore_theme.css
-base_url: loreabad6.github.io
+base_url: https://loreabad6.github.io
 twitter:
   site: "@loreabad6"
   creator: "@loreabad6"
