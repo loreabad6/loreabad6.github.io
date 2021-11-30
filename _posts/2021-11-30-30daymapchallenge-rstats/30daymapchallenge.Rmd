@@ -15,8 +15,7 @@ categories:
   - dataviz
   - 30daymapchallenge
   - rstats
-base_url: https://loreabad6.github.io
-preview: figs/summary.png
+preview: figs/preview.png
 twitter:
   site: "@loreabad6"
   creator: "@loreabad6"
