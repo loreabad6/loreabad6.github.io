@@ -59,7 +59,8 @@ Of course, this can only happen when code is shared. I personally love R's capab
 
 Many other mappers used R for their challenge as well. Here are some of the GitHub repositories and Gists I found, that used R for their challenge:
 
-[gkaramanis](https://github.com/gkaramanis/30DayMapChallenge)
+[richardvogg](https://github.com/richardvogg/30DayMapChallenge21)
+| [gkaramanis](https://github.com/gkaramanis/30DayMapChallenge)
 | [schochastics](https://github.com/schochastics/30DayMapChallenge)
 | [shandiya](https://github.com/shandiya/30DayMapChallenge)
 | [dakvid](https://gist.github.com/dakvid/)
