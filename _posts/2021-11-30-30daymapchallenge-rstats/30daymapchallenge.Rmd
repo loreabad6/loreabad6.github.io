@@ -15,7 +15,7 @@ categories:
   - dataviz
   - 30daymapchallenge
   - rstats
-preview: figs/day30.png
+preview: figs/summary.png
 twitter:
   site: "@loreabad6"
   creator: "@loreabad6"
