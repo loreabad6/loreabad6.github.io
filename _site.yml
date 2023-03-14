@@ -24,6 +24,8 @@ navbar:
       href: about.html
     - icon: fa fa-twitter
       href: https://twitter.com/loreabad6
+    - icon: fab fa-mastodon
+      href: https://fosstodon.org/@loreabad6
     - icon: fa fa-rss
       href: index.xml
 output:
