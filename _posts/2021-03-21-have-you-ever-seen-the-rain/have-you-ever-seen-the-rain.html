@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,16 +74,38 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -92,8 +115,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-03-21"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-03-21"/>
+  <meta property="article:published" itemprop="datePublished" content="2023-03-21"/>
+  <meta property="article:created" itemprop="dateCreated" content="2023-03-21"/>
   <meta name="article:author" content="Lorena Abad"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -111,17 +134,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Downscaling CHIRPS precipitation data: an artificial neural network modelling approach;citation_publication_date=2017;citation_publisher=Taylor &amp; Francis;citation_volume=38;citation_doi=10.1080/01431161.2017.1312031;citation_issn=0143-1161;citation_author=Adrianos Retalis;citation_author=Filippos Tymvios;citation_author=Dimitrios Katsanos;citation_author=Silas Michaelides"/>
-  <meta name="citation_reference" content="citation_title=The climate hazards infrared precipitation with stationsâ€”a new environmental record for monitoring extremes;citation_publication_date=2015;citation_publisher=Nature Publishing Group;citation_volume=2;citation_doi=10.1038/sdata.2015.66;citation_issn=2052-4463;citation_author=Chris Funk;citation_author=Pete Peterson;citation_author=Martin Landsfeld;citation_author=Diego Pedreros;citation_author=James Verdin;citation_author=Shraddhanand Shukla;citation_author=Gregory Husak;citation_author=James Rowland;citation_author=Laura Harrison;citation_author=Andrew Hoell;citation_author=Joel Michaelsen"/>
+  <meta name="citation_reference" content="citation_title=Downscaling CHIRPS precipitation data: an artificial neural network modelling approach;citation_publisher=Taylor &amp; Francis;citation_volume=38;citation_doi=10.1080/01431161.2017.1312031;citation_issn=0143-1161;citation_author=Adrianos Retalis;citation_author=Filippos Tymvios;citation_author=Dimitrios Katsanos;citation_author=Silas Michaelides"/>
+  <meta name="citation_reference" content="citation_title=The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes;citation_publisher=Nature Publishing Group;citation_volume=2;citation_doi=10.1038/sdata.2015.66;citation_issn=2052-4463;citation_author=Chris Funk;citation_author=Pete Peterson;citation_author=Martin Landsfeld;citation_author=Diego Pedreros;citation_author=James Verdin;citation_author=Shraddhanand Shukla;citation_author=Gregory Husak;citation_author=James Rowland;citation_author=Laura Harrison;citation_author=Andrew Hoell;citation_author=Joel Michaelsen"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","draft","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Have You Ever Seen the Rain?"]},{"type":"character","attributes":{},"value":["Explore CHIRPS rainfall data in R\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lorena Abad"]}]}]},{"type":"character","attributes":{},"value":["2021-03-21"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["r-spatial","stars","earth-engine"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["site","creator"]}},"value":[{"type":"character","attributes":{},"value":["@loreabad6"]},{"type":"character","attributes":{},"value":["@loreabad6"]}]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["bib.bib"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","twitter","draft","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Have You Ever Seen the Rain?"]},{"type":"character","attributes":{},"value":["Explore CHIRPS rainfall data in R\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Lorena Abad"]}]}]},{"type":"character","attributes":{},"value":["2023-03-21"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_float","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[2]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["r-spatial","stars","earth-engine"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["site","creator"]}},"value":[{"type":"character","attributes":{},"value":["@loreabad6"]},{"type":"character","attributes":{},"value":["@loreabad6"]}]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["bib.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["bib.bib","have-you-ever-seen-the-rain_files/anchor-4.2.2/anchor.min.js","have-you-ever-seen-the-rain_files/bowser-1.9.3/bowser.min.js","have-you-ever-seen-the-rain_files/distill-2.2.21/template.v2.js","have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-4-1.png","have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-6-1.png","have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-8-1.png","have-you-ever-seen-the-rain_files/header-attrs-2.7/header-attrs.js","have-you-ever-seen-the-rain_files/jquery-1.11.3/jquery.min.js","have-you-ever-seen-the-rain_files/popper-2.6.0/popper.min.js","have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy-bundle.umd.min.js","have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy-light-border.css","have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy.css","have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy.umd.min.js","have-you-ever-seen-the-rain_files/webcomponents-2.0.0/webcomponents.js","temp/chirps-v2.0.2021.02.28.tif","temp/chirps-v2.0.2021.days_p25.nc"]}
+  {"type":"character","attributes":{},"value":["bib.bib","have-you-ever-seen-the-rain_files/anchor-4.2.2/anchor.min.js","have-you-ever-seen-the-rain_files/bowser-1.9.3/bowser.min.js","have-you-ever-seen-the-rain_files/distill-2.2.21/template.v2.js","have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-4-1.png","have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-6-1.png","have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-8-1.png","have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-9-1.png","have-you-ever-seen-the-rain_files/header-attrs-2.20/header-attrs.js","have-you-ever-seen-the-rain_files/header-attrs-2.7/header-attrs.js","have-you-ever-seen-the-rain_files/jquery-1.11.3/jquery.min.js","have-you-ever-seen-the-rain_files/jquery-3.6.0/jquery-3.6.0.js","have-you-ever-seen-the-rain_files/jquery-3.6.0/jquery-3.6.0.min.js","have-you-ever-seen-the-rain_files/jquery-3.6.0/jquery-3.6.0.min.map","have-you-ever-seen-the-rain_files/popper-2.6.0/popper.min.js","have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy-bundle.umd.min.js","have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy-light-border.css","have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy.css","have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy.umd.min.js","have-you-ever-seen-the-rain_files/webcomponents-2.0.0/webcomponents.js","temp/chirps-v2.0.2023.days_p25.nc","temp/inec.zip"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -192,6 +215,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -433,10 +457,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1268,7 +1288,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1279,6 +1314,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1378,6 +1438,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1400,7 +1462,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -1439,8 +1501,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="have-you-ever-seen-the-rain_files/header-attrs-2.7/header-attrs.js"></script>
-  <script src="have-you-ever-seen-the-rain_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="have-you-ever-seen-the-rain_files/header-attrs-2.20/header-attrs.js"></script>
+  <script src="have-you-ever-seen-the-rain_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="have-you-ever-seen-the-rain_files/popper-2.6.0/popper.min.js"></script>
   <link href="have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="have-you-ever-seen-the-rain_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1460,7 +1522,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Have You Ever Seen the Rain?","description":"Explore CHIRPS rainfall data in R","authors":[{"author":"Lorena Abad","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-03-21T00:00:00.000+01:00","citationText":"Abad, 2021"}
+{"title":"Have You Ever Seen the Rain?","description":"Explore CHIRPS rainfall data in R","authors":[{"author":"Lorena Abad","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-03-21T00:00:00.000+01:00","citationText":"Abad, 2023"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1473,9 +1535,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Have You Ever Seen the Rain?</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
-<div class="dt=tag">r-spatial</div>
-<div class="dt=tag">stars</div>
-<div class="dt=tag">earth-engine</div>
+<div class="dt-tag">r-spatial</div>
+<div class="dt-tag">stars</div>
+<div class="dt-tag">earth-engine</div>
 </div>
 <!--/radix_placeholder_categories-->
 <p><p>Explore CHIRPS rainfall data in R</p></p>
@@ -1485,7 +1547,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   
   Lorena Abad
   
-<br/>2021-03-21
+<br/>2023-03-21
 </div>
 
 <div class="d-article">
@@ -1493,18 +1555,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#background">Background</a></li>
-<li><a href="#what-is-chirps-data">What is CHIRPS data?</a></li>
-<li><a href="#accesing-the-data">Accesing the data</a>
+<li><a href="#background" id="toc-background">Background</a></li>
+<li><a href="#what-is-chirps-data" id="toc-what-is-chirps-data">What is CHIRPS data?</a></li>
+<li><a href="#accesing-the-data" id="toc-accesing-the-data">Accesing the data</a>
 <ul>
-<li><a href="#chc-repository">CHC repository</a></li>
-<li><a href="#earth-engine">Earth Engine</a></li>
+<li><a href="#chc-repository" id="toc-chc-repository">CHC repository</a></li>
+<li><a href="#earth-engine" id="toc-earth-engine">Earth Engine</a></li>
 </ul></li>
 </ul>
 </nav>
 </div>
 <h1 id="background">Background</h1>
-<p>About two years ago I created a <a href="https://github.com/loreabad6/chirps-stars">repository on GitHub</a> to document steps on how to load CHIRPS rainfall data into R and explore it using the <code>stars</code> package. Since then, my workflows have changed significantly, and my way of accessing this data has evolved. I noticed some people were interested in this repository, so here is a post on two ways I access this data for my current work.</p>
+<p>Some years ago I created a <a href="https://github.com/loreabad6/chirps-stars">repository on GitHub</a> to document steps on how to load CHIRPS rainfall data into R and explore it using the <code>stars</code> package. Since then, my workflows have changed significantly, and my way of accessing this data has evolved. I noticed some people were interested in this repository, so here is a post on two ways I access this data for my current work.</p>
 <h1 id="what-is-chirps-data">What is CHIRPS data?</h1>
 <blockquote>
 <p>The Climate Hazards Group Infrared Precipitation with Station data (CHIRPS) is a high-resolution climatic database of precipitation embracing monthly precipitation climatology, quasi-global geostationary thermal infrared satellite observations from the Tropical Rainfall Measuring Mission (TRMM) 3B42 product, atmospheric model rainfall fields from National Oceanic and Atmospheric Administration – Climate Forecast System (NOAA CFS), and precipitation observations from various sources. <span class="citation" data-cites="Retalis2017">(<a href="#ref-Retalis2017" role="doc-biblioref">Retalis et al. 2017</a>)</span></p>
@@ -1519,58 +1581,117 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ol>
 <h2 id="chc-repository">CHC repository</h2>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://r-spatial.github.io/stars/'>stars</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span>, warn.conflicts <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://docs.ropensci.org/rnaturalearth/'>rnaturalearth</a></span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <p>We can try to download the data with R. Beware, in Windows this can be a bit tricky if not configured correctly (see a related stack overflow question <a href="https://stackoverflow.com/questions/51911544/r-crashes-while-opening-netcdf-file">here</a>). The code below worked for me. If downloading data at a finer resolution (0.05º) times out, we can always download the data manually from the CRC repository from <a href="https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/">this link</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>chirps_url</span> <span class='op'>=</span> <span class='st'>"https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2023.days_p25.nc"</span></span>
+<span><span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/files2.html'>dir.exists</a></span><span class='op'>(</span><span class='st'>"temp"</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/files2.html'>dir.create</a></span><span class='op'>(</span><span class='st'>"temp"</span><span class='op'>)</span></span>
+<span><span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/files.html'>file.exists</a></span><span class='op'>(</span><span class='st'>"temp/chirps-v2.0.2023.days_p25.nc"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/utils/download.file.html'>download.file</a></span><span class='op'>(</span></span>
+<span>    url <span class='op'>=</span> <span class='va'>chirps_url</span>,</span>
+<span>    destfile <span class='op'>=</span> <span class='st'>"temp/chirps-v2.0.2023.days_p25.nc"</span>, </span>
+<span>    mode <span class='op'>=</span> <span class='st'>"wb"</span></span>
+<span>  <span class='op'>)</span></span>
+<span><span class='op'>}</span></span></code></pre>
+</div>
 </div>
 <p>Then we can read in the data with the stars package.</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>chirps_daily_2023</span> <span class='op'>=</span> <span class='fu'><a href='https://r-spatial.github.io/stars/reference/read_stars.html'>read_stars</a></span><span class='op'>(</span><span class='st'>"temp/chirps-v2.0.2023.days_p25.nc"</span><span class='op'>)</span></span>
+<span><span class='va'>chirps_daily_2023</span></span></code></pre>
+</div>
 <pre><code>stars object with 3 dimensions and 1 attribute
 attribute(s), summary of first 1e+05 cells:
- chirps-v2.0.2021.days_p25.nc [mm/d]
- Min.   : 0.00                      
- 1st Qu.: 0.00                      
- Median : 0.00                      
- Mean   : 1.62                      
- 3rd Qu.: 0.00                      
- Max.   :79.44                      
- NA&#39;s   :51001                      
+                                    Min. 1st Qu. Median     Mean
+chirps-v2.0.2023.days_p25.nc [mm/d]    0       0      0 1.333637
+                                    3rd Qu.     Max.  NA&#39;s
+chirps-v2.0.2023.days_p25.nc [mm/d]       0 137.2787 51001
 dimension(s):
-     from   to         offset  delta  refsys point values x/y
-x       1 1440           -180   0.25      NA    NA   NULL [x]
-y       1  400             50  -0.25      NA    NA   NULL [y]
-time    1   59 2021-01-01 UTC 1 days POSIXct    NA   NULL    </code></pre>
+     from   to         offset  delta  refsys x/y
+x       1 1440           -180   0.25      NA [x]
+y       1  400             50  -0.25      NA [y]
+time    1   59 2023-01-01 UTC 1 days POSIXct    </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>chirps_daily_2023</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/slice.html'>slice</a></span><span class='op'>(</span><span class='va'>time</span>, <span class='fl'>18</span><span class='op'>)</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span>breaks <span class='op'>=</span> <span class='st'>'equal'</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
 </div>
 <p>I usually perform my analysis at a country or regional scale rather than a global scale, so let’s see how we can subset this dataset for a specific region. We will use the <code>rnaturalearth</code> package to obtain the polygon of a country, in this case, my home country Ecuador.</p>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>world</span> <span class='op'>=</span> <span class='fu'><a href='https://docs.ropensci.org/rnaturalearth/reference/ne_countries.html'>ne_countries</a></span><span class='op'>(</span>scale <span class='op'>=</span> <span class='st'>'medium'</span>, returnclass <span class='op'>=</span> <span class='st'>'sf'</span><span class='op'>)</span></span>
+<span><span class='va'>ecuador</span> <span class='op'>=</span> <span class='va'>world</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>admin</span> <span class='op'>==</span> <span class='st'>'Ecuador'</span><span class='op'>)</span></span></code></pre>
 </div>
-<p>To subset the data need to make the Coordinate Reference System (CRS) of both the chirps data and our country sf object the same. Let’s check the CRS for both:</p>
+</div>
+<p>To subset the data, we need to make the Coordinate Reference System (CRS) of both the chirps data and our country sf object the same. Let’s check the CRS for both:</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>ecuador_proj</span> <span class='op'>=</span> <span class='fu'><a href='https://r-spatial.github.io/sf/reference/st_transform.html'>st_transform</a></span><span class='op'>(</span><span class='va'>ecuador</span>, <span class='fl'>4326</span><span class='op'>)</span></span>
+<span><span class='va'>chirps_daily_2023</span> <span class='op'>=</span> <span class='fu'><a href='https://r-spatial.github.io/sf/reference/st_crs.html'>st_set_crs</a></span><span class='op'>(</span><span class='va'>chirps_daily_2023</span>, <span class='fl'>4326</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>chirps_ecuador</span> <span class='op'>=</span> <span class='va'>chirps_daily_2023</span><span class='op'>[</span><span class='va'>ecuador_proj</span><span class='op'>]</span></span>
+<span></span>
+<span><span class='va'>chirps_ecuador</span><span class='op'>[</span>,,,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>9</span><span class='op'>]</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
-
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>time_series</span> <span class='op'>=</span> <span class='fu'><a href='https://r-spatial.github.io/stars/reference/st_apply.html'>st_apply</a></span><span class='op'>(</span><span class='va'>chirps_ecuador</span>, <span class='st'>"time"</span>, <span class='va'>mean</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span></code></pre>
+</div>
 </div>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://r-spatial.github.io/stars/reference/geom_stars.html'>geom_stars</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>chirps_ecuador</span><span class='op'>[</span>,,,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>12</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_viridis.html'>scale_fill_viridis_c</a></span><span class='op'>(</span><span class='st'>"Precipitation (mm/day)"</span>, na.value <span class='op'>=</span> <span class='st'>'white'</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/facet_wrap.html'>facet_wrap</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>time</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggsf.html'>coord_sf</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_void</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>legend.position <span class='op'>=</span> <span class='st'>'top'</span><span class='op'>)</span></span></code></pre>
+</div>
 <p><img src="have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>time_series</span> <span class='op'>|&gt;</span> </span>
+<span>  <span class='fu'><a href='https://tibble.tidyverse.org/reference/as_tibble.html'>as_tibble</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_path.html'>geom_line</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>mean</span>, x <span class='op'>=</span> <span class='va'>time</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_y_continuous</a></span><span class='op'>(</span><span class='st'>"Mean precipitation (mm/day)"</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="have-you-ever-seen-the-rain_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Descargar provincias y cantones de Ecuador</span></span>
+<span><span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/files2.html'>dir.exists</a></span><span class='op'>(</span><span class='st'>"temp"</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/files2.html'>dir.create</a></span><span class='op'>(</span><span class='st'>"temp"</span><span class='op'>)</span></span>
+<span><span class='va'>src</span> <span class='op'>=</span> <span class='st'>'http://www.ecuadorencifras.gob.ec//documentos/web-inec/Cartografia/Clasificador_Geografico/2012/SHP.zip'</span></span>
+<span><span class='va'>dst</span> <span class='op'>=</span> <span class='st'>'temp/inec.zip'</span></span>
+<span><span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/files.html'>file.exists</a></span><span class='op'>(</span><span class='va'>dst</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/utils/download.file.html'>download.file</a></span><span class='op'>(</span><span class='va'>src</span>, <span class='va'>dst</span><span class='op'>)</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/utils/unzip.html'>unzip</a></span><span class='op'>(</span><span class='va'>dst</span>, exdir <span class='op'>=</span> <span class='st'>"temp"</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span></code></pre>
+</div>
 </div>
 <h2 id="earth-engine">Earth Engine</h2>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>-- rgee 1.0.5 ----------------------------- earthengine-api 0.1.232 -- 
- v email: not_defined
- v Initializing Google Earth Engine:
- v Initializing Google Earth Engine:  DONE!
-
- v Earth Engine user: users/loreabad6 
----------------------------------------------------------------------- </code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/r-spatial/rgee/'>rgee</a></span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://r-spatial.github.io/rgee/reference/ee_Initialize.html'>ee_Initialize</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-Funk2015b" class="csl-entry" role="doc-biblioentry">
 Funk, Chris, Pete Peterson, Martin Landsfeld, Diego Pedreros, James Verdin, Shraddhanand Shukla, Gregory Husak, et al. 2015. <span>“<span class="nocase">The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes</span>.”</span> <em>Scientific Data</em> 2: 150066. <a href="https://doi.org/10.1038/sdata.2015.66">https://doi.org/10.1038/sdata.2015.66</a>.
