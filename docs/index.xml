@@ -7,7 +7,22 @@
     <description>Collection of my r-spatial and rstats related work.
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 30 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>2023-04-26</lastBuildDate>
+    <item>
+      <title>#betterposter at EGU 2023</title>
+      <dc:creator>Lorena Abad</dc:creator>
+      <link>https://loreabad6.github.io/posts/2023-04-26-betterposter-at-egu-2023</link>
+      <description>Using `posterdown` to build better posters.</description>
+      <category>r-spatial</category>
+      <category>dataviz</category>
+      <category>scicomm</category>
+      <category>posterdown</category>
+      <category>rstats</category>
+      <category>egu23</category>
+      <guid>https://loreabad6.github.io/posts/2023-04-26-betterposter-at-egu-2023</guid>
+      <pubDate>2023-04-26</pubDate>
+      <media:content url="https://loreabad6.github.io/posts/2023-04-26-betterposter-at-egu-2023/figs/poster_thumbnail-min.PNG" medium="image" type="image/png" width="1335" height="946"/>
+    </item>
     <item>
       <title>#30DayMapChallenge &amp; #RStats</title>
       <dc:creator>Lorena Abad</dc:creator>
@@ -18,7 +33,7 @@
       <category>30daymapchallenge</category>
       <category>rstats</category>
       <guid>https://loreabad6.github.io/posts/2021-11-30-30daymapchallenge-rstats</guid>
-      <pubDate>Tue, 30 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>2021-11-30</pubDate>
       <media:content url="https://loreabad6.github.io/posts/2021-11-30-30daymapchallenge-rstats/figs/preview.png" medium="image" type="image/png" width="914" height="480"/>
     </item>
     <item>
@@ -31,7 +46,7 @@
       <category>talks</category>
       <category>foss4g</category>
       <guid>https://loreabad6.github.io/posts/2021-11-18-foss4grspatial</guid>
-      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>2021-11-18</pubDate>
       <media:content url="https://loreabad6.github.io/posts/2021-11-18-foss4grspatial/figs/preview.png" medium="image" type="image/png" width="761" height="480"/>
     </item>
     <item>
@@ -43,7 +58,7 @@
       <category>dataviz</category>
       <category>networks</category>
       <guid>https://loreabad6.github.io/posts/2021-03-05-geospatial-network-visualization</guid>
-      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>2021-03-05</pubDate>
       <media:content url="https://loreabad6.github.io/posts/2021-03-05-geospatial-network-visualization/figs/preview.png" medium="image" type="image/png" width="1536" height="480"/>
     </item>
   </channel>
