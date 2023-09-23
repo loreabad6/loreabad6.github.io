@@ -1,0 +1,17 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/2023-04-26-betterposter-at-egu-2023/betterposter-at-egu-2023.html",
+      "/posts/2021-11-30-30daymapchallenge-rstats/30daymapchallenge.html",
+      "/posts/2021-11-18-foss4grspatial/foss4grspatial.html",
+      "/posts/2021-03-05-geospatial-network-visualization/geospatial-network-visualization.html"
+    ]
+  },
+  {
+    "listing": "/old-content/index.html",
+    "items": [
+      "/old-content/about.html"
+    ]
+  }
+]

@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Lore Abad"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Posts
+      - about.qmd
+
+format:
+  html:
+    theme: yeti
+    css: styles.css
+    toc: true
+    
+# website:
+  # twitter-card:
+    # creator: "@loreabad6"
+    # site: "@loreabad6"
+
+
+

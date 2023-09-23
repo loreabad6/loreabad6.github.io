@@ -1,0 +1,21 @@
+---
+title: "About"
+about:
+  template: jolla
+  image: "AbadL.jpg"
+  links:
+    - icon: 'mastodon'
+      text: 'mastodon'
+      href: 'https://fosstodon.org/@loreabad6'
+    - icon: 'twitter'
+      text: 'twitter'
+      href: "https://twitter.com/loreabad6"
+    - icon: 'github'
+      text: 'github'
+      href: "https://github.com/loreabad6"
+    - icon: 'linkedin'
+      text: 'linkedin'
+      href: "https://linkedin.com/in/lorena-abad/"
+---
+
+I am a researcher with a background in environmental engineering and geospatial technologies. R is my go-to coding language for data science and visualization as well as scientific report and article writing. This blog is meant to share some tip and tricks I have learned along the way. You can reach me at any of the links below!

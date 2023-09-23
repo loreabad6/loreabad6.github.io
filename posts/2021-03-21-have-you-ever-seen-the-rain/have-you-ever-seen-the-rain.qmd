@@ -1,0 +1,133 @@
+---
+title: "Have You Ever Seen the Rain?"
+description: |
+  Explore CHIRPS rainfall data in R
+date: 2023-03-21
+categories:
+  - r-spatial
+  - stars
+  - earth-engine
+# preview: figs/preview.png
+draft: true
+bibliography: bib.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+chirps23 = !file.exists(here::here("_posts/2021-03-21-have-you-ever-seen-the-rain/temp/chirps-v2.0.2023.days_p05.nc"))
+```
+
+# Background 
+
+Some years ago I created a [repository on GitHub](https://github.com/loreabad6/chirps-stars) to document steps on how to load CHIRPS rainfall data into R and explore it using the `stars` package. Since then, my workflows have changed significantly, and my way of accessing this data has evolved. I noticed some people were interested in this repository, so here is a post on two ways I access this data for my current work. 
+
+# What is CHIRPS data?
+
+> The Climate Hazards Group Infrared Precipitation with Station data (CHIRPS) is a high-resolution climatic database of precipitation embracing monthly precipitation climatology, quasi-global geostationary thermal infrared satellite observations from the Tropical Rainfall Measuring Mission (TRMM) 3B42 product, atmospheric model rainfall fields from National Oceanic and Atmospheric Administration – Climate Forecast System (NOAA CFS), and precipitation observations from various sources. [@Retalis2017] 
+
+Overall it is a combination of station-based observations around the world, and satellite derived data for meteorology, including TRMM and NOAA, which are normally used for precipitation analysis.
+
+The data covers information from 1981 to the present on a daily, monthly, yearly and decadal basis. It spans latitudes between 50°S and 50°N and all longitudes. The data is presented in a raster format with a cell size of 0.05° or 0.25°. Each of the cells represent a rain gauge [@Funk2015b].
+
+# Accesing the data
+
+This is not an exhaustive list of how-to access CHIRPS data, but just the two options I work with:
+
+1. Through the Climate Hazards Center (CHC) official repository: https://data.chc.ucsb.edu/
+2. Through Google Earth Engine: https://developers.google.com/earth-engine/datasets/tags/chg
+
+## CHC repository
+
+```{r}
+library(stars)
+library(tidyverse, warn.conflicts = FALSE)
+library(rnaturalearth)
+```
+
+We can try to download the data with R. Beware, in Windows this can be a bit tricky if not configured correctly (see a related stack overflow question [here](https://stackoverflow.com/questions/51911544/r-crashes-while-opening-netcdf-file)). The code below worked for me. If downloading data at a finer resolution (0.05º) times out, we can always download the data manually from the CRC repository from [this link](https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/).
+
+```{r, eval = chirps23}
+chirps_url = "https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2023.days_p25.nc"
+if (!dir.exists("temp")) dir.create("temp")
+if (!file.exists("temp/chirps-v2.0.2023.days_p25.nc")) {
+  download.file(
+    url = chirps_url,
+    destfile = "temp/chirps-v2.0.2023.days_p25.nc", 
+    mode = "wb"
+  )
+}
+
+```
+
+Then we can read in the data with the stars package. 
+
+```{r}
+chirps_daily_2023 = read_stars("temp/chirps-v2.0.2023.days_p25.nc")
+chirps_daily_2023
+```
+
+```{r}
+chirps_daily_2023 |> slice(time, 18) |> plot(breaks = 'equal')
+```
+
+I usually perform my analysis at a country or regional scale rather than a global scale, so let's see how we can subset this dataset for a specific region. We will use the `rnaturalearth` package to obtain the polygon of a country, in this case, my home country Ecuador.
+
+```{r}
+world = ne_countries(scale = 'medium', returnclass = 'sf')
+ecuador = world |>
+  filter(admin == 'Ecuador')
+```
+
+To subset the data, we need to make the Coordinate Reference System (CRS) of both the chirps data and our country sf object the same. Let's check the CRS for both:
+
+```{r}
+ecuador_proj = st_transform(ecuador, 4326)
+chirps_daily_2023 = st_set_crs(chirps_daily_2023, 4326)
+
+chirps_ecuador = chirps_daily_2023[ecuador_proj]
+
+chirps_ecuador[,,,1:9] |> plot()
+```
+
+```{r}
+time_series = st_apply(chirps_ecuador, "time", mean, na.rm = TRUE)
+```
+
+```{r}
+ggplot() +
+  geom_stars(data = chirps_ecuador[,,,1:12]) +
+  scale_fill_viridis_c("Precipitation (mm/day)", na.value = 'white') +
+  facet_wrap(~time) +
+  coord_sf() +
+  theme_void() +
+  theme(legend.position = 'top')
+```
+```{r}
+time_series |> 
+  as_tibble() |> 
+  ggplot() +
+  geom_line(aes(y = mean, x = time)) +
+  scale_y_continuous("Mean precipitation (mm/day)")
+```
+
+```{r, eval = FALSE}
+# Descargar provincias y cantones de Ecuador
+if (!dir.exists("temp")) dir.create("temp")
+src = 'http://www.ecuadorencifras.gob.ec//documentos/web-inec/Cartografia/Clasificador_Geografico/2012/SHP.zip'
+dst = 'temp/inec.zip'
+if (!file.exists(dst)) {
+  download.file(src, dst)
+  unzip(dst, exdir = "temp")
+}
+```
+
+## Earth Engine
+
+```{r, eval = FALSE}
+library(rgee)
+ee_Initialize()
+
+```
+
+
+
