@@ -9,17 +9,14 @@ website:
       - href: index.qmd
         text: Posts
       - about.qmd
+  twitter-card:
+    creator: "@loreabad6"
+    site: "@loreabad6"
 
 format:
   html:
-    theme: yeti
+    theme:
+      light: flatly
+      dark: darkly
     css: styles.css
     toc: true
-    
-# website:
-  # twitter-card:
-    # creator: "@loreabad6"
-    # site: "@loreabad6"
-
-
-

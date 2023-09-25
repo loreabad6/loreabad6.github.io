@@ -1,6 +1,6 @@
 ---
-title: "Lore Abad"
-subtitle: A spatial data science blog
+title: "Notes and scribbles"
+subtitle: A spatial data science blog by Lorena Abad
 listing:
   feed: true
   contents: posts
