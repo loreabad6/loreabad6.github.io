@@ -3,12 +3,22 @@ project:
   output-dir: docs
 
 website:
+  favicon: "static/favicon.ico"
   title: "Lore Abad"
   navbar:
     left:
       - href: index.qmd
         text: Posts
       - about.qmd
+    right:
+      - icon: 'mastodon'
+        href: 'https://fosstodon.org/@loreabad6'
+      - icon: 'twitter'
+        href: "https://twitter.com/loreabad6"
+      - icon: 'github'
+        href: "https://github.com/loreabad6"
+      - icon: 'linkedin'
+        href: "https://linkedin.com/in/lorena-abad/"
   twitter-card:
     creator: "@loreabad6"
     site: "@loreabad6"
