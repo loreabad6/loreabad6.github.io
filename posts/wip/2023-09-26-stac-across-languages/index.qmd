@@ -130,7 +130,72 @@ items = client  |>
   items_filter(
     filter_fn = function(x) {x$properties$`eo:cloud_cover` < 10}
   )
-length(items)
+items_length(items)
+```
+:::
+
+To explore the items as data frames we can either convert to a geopandas table or to an sf table. 
+
+::: {.panel-tabset group="language"}
+
+## Python
+
+```{python}
+items_df = gpd.GeoDataFrame.from_features(items.to_dict(), crs="epsg:4326")
+items_df
 ```
 
+## R
+
+```{r}
+# we add an extra column to be able to subset the original item list
+items_df = items_as_sf(items) |> 
+  mutate(fid = row_number())
+# wrap function around st_as_sf and as_tibble just for nicer printing
+st_as_sf(as_tibble(items_df))
+```
+:::
+
+::: {.panel-tabset group="language"}
+
+## Python
+
+```{python}
+ids = items_df.loc[
+  (items_df['eo:cloud_cover'] <= 2) &
+  (items_df['s2:nodata_pixel_percentage'] <= 10)
+]
+item = items[ids.index[0]]
+item.datetime
+```
+
+## R
+
+```{r}
+ids = items_df |> 
+  filter(
+    `eo:cloud_cover` <= 2, `s2:nodata_pixel_percentage` <= 10
+  ) |> 
+  pull(fid)
+item = items$features[[ids[1]]]
+item$properties$datetime
+```
+:::
+
+::: {.panel-tabset group="language"}
+
+## Python
+
+```{python}
+thumbnail = item.assets["thumbnail"].href
+Image(url = thumbnail)
+```
+
+## R
+
+```{r}
+item |> 
+  assets_url(asset_names = "thumbnail") |> 
+  include_graphics()
+```
 :::
