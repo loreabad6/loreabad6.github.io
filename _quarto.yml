@@ -9,6 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Posts
+      - href: presentations.qmd
+        text: Presentations
       - about.qmd
     right:
       - icon: 'mastodon'

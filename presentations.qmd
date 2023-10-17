@@ -1,0 +1,40 @@
+---
+title: "Presentations and Workshops"
+---
+
+## 2023
+
+Tools and packages to query and process Sentinel-1 and Sentinel-2 data with R and Python. 31-08-2023. OpenGeoHub Summer School Poznan 2023, Poznan, Poland. [Material](https://loreabad6.github.io/ogh23/) | [Video Part 1](https://www.youtube.com/live/WRxmAhDEQFE?feature=shared) | [Video Part 2](https://www.youtube.com/live/a8X_jFN63Wc?feature=shared)
+
+Open data and open science for risk, hazard and climate assessments. 30-08-2023. discussion Forum "What can R, Python, and Julia development communities do to combat the climate crisis?". OpenGeoHub Summer School Poznan 2023, Poznan, Poland. [Video](https://youtu.be/qiUh9WjozRA)
+
+## 2022
+
+SliDEM: An open-source-based workflow for DEM generation from Sentinel-1 for landslide volume estimation.26-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://drive.google.com/file/d/1tc5K_Rwd8wFz1pvrpZXZ7StEUtlCWMeJ/view)
+
+sfnetworks: Tidy Geospatial Networks in R. 22-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://sfnetworks.github.io/foss4g-workshop/slides/slides)
+
+Análisis de redes espaciales con `sfnetworks`. 17-08-2022. OceanHackWeek 2022 (online). [Slides](https://sfnetworks.github.io/ohw22-es/sfnetworks-es) | [Video](https://youtu.be/G6nTyJZI2tU?feature=shared)
+
+Análisis de redes espaciales con `sfnetworks`. 08-06-2022. R-Ladies Guayaquil Meetup. Guayaquil, Ecuador (online). [Slides](https://sfnetworks.github.io/rladies-gye/slides) | [Video](https://www.youtube.com/watch?v=Av5lhO3Fero&ab_channel=R-LadiesEcuador)
+
+An open-source Python package for DEM generation and landslide volume estimation based on Sentinel-1 imagery. 24-05-2022. EGU General Assembly 2022, Vienna, Austria (online). [Abstract](https://meetingorganizer.copernicus.org/) | [Slides](https://presentations.copernicus.org/EGU22/EGU22-693_presentation-h520626.pdf)
+
+## 2021
+
+Reproducible spatial data visualization with R. R-Spatial Panel. 30-09-2021. FOSS4G 2021, Buenos Aires, Argentina (online). [Slides](https://loreabad6.github.io/foss4g/slides.html#1) | [Video](https://youtu.be/iA0OQ2Icn6Y)
+
+Road Construction and Rainfall as Landslide Triggers in the Rio Lucma Catchment, Eastern Cordillera Blanca, Peru. 29-04-2021. EGU General Assembly 2021, Vienna, Austria (online). [Abstract](https://meetingorganizer.copernicus.org/EGU21/EGU21-11015.html) |  [Slides](https://loreabad6.github.io/vEGU21_display/display.html#1)
+
+Introducción al paquete sfnetworks: Análisis de redes geoespaciales con R. 15-01-2021. R-Espacial en Español, (online). [Slides](https://sfnetworks.github.io/sfnetworks-REspacialES/slides#1) | [Video](https://www.youtube.com/watch?v=jKRmsOjguqo&ab_channel=REspacialenEspa%C3%B1ol)
+
+## 2020
+
+Mapping and monitoring landslide-dammed lakes in Kaikōura, New Zealand using the Google Earth Engine. 21-10-2020. Geo For Good User Summit 2020 - Public Sector Meetup (online). [Slides](https://qrgo.page.link/izjEp) | [Poster](https://docs.google.com/presentation/d/1FVrxwwuBUsb69OKYbyssNDphket-6V4nhlK1OuXVDdw) | [Video](https://www.youtube.com/live/CbHYkUpCwCI?feature=shared&t=3035)
+
+Tidy Geospatial Networks in R: Introducing the sfnetworks package. 16-06-2020. e-Rum2020 statellite event: Hackathon on Spatial Networks, (online). [Slides](https://www.youtube.com/watch?v=ZXTNXsvKYwo&ab_channel=RobinLovelace) | [Video](https://www.youtube.com/watch?v=ZXTNXsvKYwo&ab_channel=RobinLovelace)
+
+Mapping and monitoring of landslide-dammed lakes using Sentinel-2 time series. 07-05-2020. EGU General Assembly 2020, Vienna, Austria (online).
+[Abstract](https://meetingorganizer.copernicus.org/EGU2020/EGU2020-572.html) | [Slides](https://presentations.copernicus.org/EGU2020/EGU2020-572_presentation.pdf)
+
+El rol de las tecnologías geoespaciales para el mapeo y monitoreo de peligros naturales. 19-09-2020, Voces de la  Ingeniería Ambiental, Cuenca, Ecuador (online).  [Slides](https://loreabad6.github.io/VocesAmbiental/presentacion.html) | [Video](https://www.facebook.com/watch/live/?extid=MZJv41PQtCQ5l6jT&ref=watch_permalink&v=327432258323373)
