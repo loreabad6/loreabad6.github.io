@@ -5,16 +5,13 @@ about:
   image: "AbadL.jpg"
   links:
     - icon: 'mastodon'
-      text: 'mastodon'
+      text: 'Mastodon'
       href: 'https://fosstodon.org/@loreabad6'
-    - icon: 'twitter'
-      text: 'twitter'
-      href: "https://twitter.com/loreabad6"
     - icon: 'github'
-      text: 'github'
+      text: 'GitHub'
       href: "https://github.com/loreabad6"
     - icon: 'linkedin'
-      text: 'linkedin'
+      text: 'LinkedIn'
       href: "https://linkedin.com/in/lorena-abad/"
 ---
 
