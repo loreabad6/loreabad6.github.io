@@ -10,6 +10,8 @@ Open data and open science for risk, hazard and climate assessments. 30-08-2023.
 
 ## 2022
 
+Mass movement susceptibility assessment of alpine infrastructure in the Salzkammergut area, Austria. 18-10-2022. Landslide Scientific Assessment Conference: Landslide hazard, (online). [Video](https://www.youtube.com/watch?v=96H3rLHHazo&ab_channel=LandScient)
+
 SliDEM: An open-source-based workflow for DEM generation from Sentinel-1 for landslide volume estimation.26-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://drive.google.com/file/d/1tc5K_Rwd8wFz1pvrpZXZ7StEUtlCWMeJ/view)
 
 sfnetworks: Tidy Geospatial Networks in R. 22-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://sfnetworks.github.io/foss4g-workshop/slides/slides)
