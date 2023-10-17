@@ -20,7 +20,7 @@ knitr::opts_chunk$set(message = F, warning = F, echo = T, eval = T)
 
 # Some background
 
-Over a month ago I was invited as a lecturer at the [OpenGeoHub 2023 Summer School in Poznan](https://opengeohub.org/summer-school/opengeohub-summer-school-poznan-2023/), Poland. It was a great experience, meeting brilliant people, learning from other lecturers and enjoying the city.
+Over a month ago I was invited as a lecturer at the [OpenGeoHub 2023 Summer School in Poznan](https://opengeohub.org/summer-school/opengeohub-summer-school-poznan-2023/), Poland. It was a great experience, meeting brilliant people, learning from other lecturers and enjoying the city. Many thanks to the organizers!
 
 My lecture was on [Tools and packages to query and process Sentinel-1 and Sentinel-2 data with R and Python](https://loreabad6.github.io/ogh23/). Following on the lecture and inspired by the [geocompx blogpost on geographic data analysis in R and Python](https://geocompx.org/post/2023/ogh23/), I started the quest to do a similar post with the basic content of my lecture.
 
@@ -89,7 +89,7 @@ collections(client) |> get_request()
 ```
 :::
 
-We will choose here Sentinel-1 Level 2a data, which provides atmospherically corrected data representing surface reflectance.
+We will choose here Sentinel-2 Level 2a data, which provides atmospherically corrected data representing surface reflectance.
 
 We can also set the coordinates for our query, in this case a `POINT` geometry, which will help to retrieve scenes that intersect with it. At last we can also set a time extent, where we define the start and end of our query.
 
