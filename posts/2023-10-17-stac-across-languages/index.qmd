@@ -1,0 +1,339 @@
+---
+title: "STAC across Languages"
+description: |
+  STAC on-demand data cubes with R and Python.
+date: today
+image: figs/thumbnail.png
+categories:
+  - r-spatial
+  - python
+  - rstats
+bibliography: bib.bib
+draft: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+knitr::opts_chunk$set(message = F, warning = F, echo = T, eval = T)
+```
+
+# Some background
+
+Over a month ago I was invited as a lecturer at the [OpenGeoHub 2023 Summer School in Poznan](https://opengeohub.org/summer-school/opengeohub-summer-school-poznan-2023/), Poland. It was a great experience, meeting brilliant people, learning from other lecturers and enjoying the city.
+
+My lecture was on [Tools and packages to query and process Sentinel-1 and Sentinel-2 data with R and Python](https://loreabad6.github.io/ogh23/). Following on the lecture and inspired by the [geocompx blogpost on geographic data analysis in R and Python](https://geocompx.org/post/2023/ogh23/), I started the quest to do a similar post with the basic content of my lecture.
+
+Why do I call it a quest? Well, it took me a while. Before this post, my website was based on `distill`, so the migration process from a `distill`-based website to a `quarto`-based one was the first task. Why did I have to do the migration? Because [Quarto](https://quarto.org/docs/websites/) allows the combination of two or more programming languages in a single file, crucial for data science across languages.
+
+::: column-margin
+I managed to migrate thanks to the Quarto documentation and to posts from Danielle Navarro [@navarro2022]. Big thanks!
+:::
+
+But in any case, I can now inaugurate my new website with a post on how to query STAC data and create on-demand data cubes with R and Python! So let's get to it.
+
+# Libraries
+
+Let's first load the libraries needed. Here you can get familiar with the tab setting of this post. Clicking on the R or Python tab will switch between languages. Clicking on either tab will switch the panel in the whole document.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+import dask.array as da # handle dask arrays
+import geopandas as gpd # handle geospatial data frames
+from IPython.display import Image # visualize URLs
+import pystac_client # connecting to the STAC API
+from rasterio.enums import Resampling # perform re-sampling operations
+import shapely # create vector objects
+import stackstac # build an on-demand STAC data cube
+```
+
+## R
+
+```{r}
+library(dplyr) # data wrangling
+library(gdalcubes) # on-demand data cubes
+library(knitr) # visualize URLs
+library(rstac) # connecting to the STAC API
+library(sf) # handle geospatial data frames
+```
+:::
+
+# Querying STAC data
+
+[STAC](https://stacspec.org/en) stands for SpatioTemporal Asset Catalog and it is "a common language to describe geospatial information, so it can more easily be worked with, indexed, and discovered".
+
+There are several APIs available to query data, you can browse them all in the [STAC catalog index](https://stacindex.org/catalogs). Some of these APIs will require authentication to access the data. We will use the Earth Search catalog for this post, which allows querying data on Amazon Web Services (AWS). The data we will fetch (Sentinel-2) does not require authentication.
+
+In Python we can use the [`pystac-client`](https://pystac-client.readthedocs.io/en/stable/quickstart.html#python) library [@pystac21], while in R we can use the [`rstac`](https://brazil-data-cube.github.io/rstac/index.html) library [@rstac21]. Refer to their documentation pages for more information.
+
+To start fetching data, we will open a client. We can then see the collections available for this API. In Python we call a for loop on the client collections, while in R we use the `get_request()` function. Both methods make an HTTP GET request to STAC web services.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+api_url = 'https://earth-search.aws.element84.com/v1'
+client = pystac_client.Client.open(api_url)
+for collection in client.get_collections():
+    print(collection)
+```
+
+## R
+
+```{r}
+api_url = "https://earth-search.aws.element84.com/v1"
+client = stac(api_url)
+collections(client) |> get_request()
+```
+:::
+
+We will choose here Sentinel-1 Level 2a data, which provides atmospherically corrected data representing surface reflectance.
+
+We can also set the coordinates for our query, in this case a `POINT` geometry, which will help to retrieve scenes that intersect with it. At last we can also set a time extent, where we define the start and end of our query.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+# collection ID
+collection = 'sentinel-2-l2a'
+# coordinates
+lon = 16.9
+lat = 52.4
+point = shapely.Point(lon, lat)
+# date range
+time_extent = '2022-05-01/2022-10-01'
+```
+
+## R
+
+```{r}
+# collection ID
+collection = 'sentinel-2-l2a'
+# coordinates
+lon = 16.9
+lat = 52.4
+point = st_point(c(lon, lat))
+# date range
+time_extent = c("2022-05-01", "2022-10-01")
+```
+:::
+
+Now, we can pass the arguments to our search. Note for the R search we had to slightly format the `datetime` parameter. This is because of a bug when fetching the data from STAC.
+
+You will see we can also query based on scene metadata. In this example we look for scenes with cloud cover lower than 10% for the whole scene. In Python we do the filtering within the search, while in R we perform it after the HTTP POST request.
+
+Finally, we check how many items we fetched with our query, also to compare that R and Python give us the same results.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+search = client.search(
+    collections=[collection],
+    intersects=point,
+    datetime=time_extent,
+    query=["eo:cloud_cover<10"],
+)
+items = search.item_collection()
+len(items)
+```
+
+## R
+
+```{r}
+items = client  |> 
+  stac_search(
+      collections = collection,
+      intersects = point, 
+      datetime = paste0(time_extent,"T00:00:00Z", collapse = "/"),
+      limit = 100
+    ) |> 
+  post_request() |> 
+  items_filter(
+    filter_fn = function(x) {x$properties$`eo:cloud_cover` < 10}
+  )
+items_length(items)
+```
+:::
+
+To explore the items as data frames we can either convert to a `geopandas` table in Python or to an `sf` table in R. We added an extra `fid` column to allow index matching to the original item list.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+items_df = gpd.GeoDataFrame.from_features(items.to_dict(), crs="epsg:4326")
+items_df
+```
+
+## R
+
+```{r}
+# we add an extra column to be able to subset the original item list
+items_df = items_as_sf(items) |> 
+  mutate(fid = row_number())
+# wrap function around st_as_sf and as_tibble just for nicer printing
+st_as_sf(as_tibble(items_df))
+```
+:::
+
+When we have the items as data frame, we can further filter the data based on the table columns. Below, we filter for data with a cloud cover lower than 2% and with a no-data pixel percentage below 10%.
+
+To illustrate how to fetch item properties, we can select the first item in our list and get the datetime of this scene.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+ids = items_df.loc[
+  (items_df['eo:cloud_cover'] <= 2) &
+  (items_df['s2:nodata_pixel_percentage'] <= 10)
+]
+item = items[ids.index[0]]
+item.datetime
+```
+
+## R
+
+```{r}
+ids = items_df |> 
+  filter(
+    `eo:cloud_cover` <= 2, `s2:nodata_pixel_percentage` <= 10
+  ) |> 
+  pull(fid)
+item = items$features[[ids[1]]]
+item$properties$datetime
+```
+:::
+
+We can also take a look at the selected scene by fetching the item thumbnail. Here you will see that both R and Python return the same scene, as they should! `r emo::ji('wink')`.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+thumbnail = item.assets["thumbnail"].href
+Image(url = thumbnail)
+```
+
+## R
+
+```{r}
+item |> 
+  assets_url(asset_names = "thumbnail") |> 
+  include_graphics()
+```
+:::
+
+# Creating a STAC data cube
+
+Fetching individual scenes is interesting, but the real power of working with the STAC API is the possibility to work with big EO data without the need to download a single pixel to your own computer!
+
+For this, we can create an on-demand data cube that can help us organize and analyze our data, doing the data wrangling needed and only fetching the data we need as a final step.
+
+To create on-demand data cubes, we will use R's [gdalcubes](https://gdalcubes.github.io/) [@gdalcubes21] and Python's [stackstac](https://stackstac.readthedocs.io/en/latest/) [@stackstac23].
+
+We will create our data cube on a smaller subset. Here we load a GeoJSON file of Poznan, where the summer school took place. We read it in and extract its bounding box.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+poznan = "https://raw.githubusercontent.com/loreabad6/ogh23/main/data/poznan.geojson"
+footprint = gpd.read_file(poznan)
+bbox = footprint.total_bounds
+```
+
+## R
+
+```{r}
+poznan = "https://raw.githubusercontent.com/loreabad6/ogh23/main/data/poznan.geojson"
+footprint = read_sf(poznan)
+bbox = footprint |> st_transform(crs = 32633) |> st_bbox()
+```
+:::
+
+Now we can create our cube. The following code chunk has several steps depending if you are in the R or Python tab. I kept it as a single block since this is how we get an on-demand data cube on each end. In essence what we do is:
+
+1.  Define the assets we want.
+
+I selected RGB+NIR bands to illustrate this process, but of course we can set any other band. I included the \[SCL band\] (https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm-overview) which we will use to mask clouds.
+
+2.  Set-up the cube.
+
+-   In Python we do this with the `stackstac.stack` function, where we can set the resolution, assets, bounding box, and re-sampling method for the data. Separately we define a cloud mask to get remove invalid pixels.
+-   In R, this works in a lengthier way, using more intermediate functions. We first define the collection with the assets with the `stac_image_collection` function. Then, we define an extent in the form of a list. This extent will have the start and end date as well as the bounding box of our cube. Now we can define a `view`, which defines the CRS, spatial and temporal resolution, and the aggregation and re-sampling method. We finally define the cloud mask with `image_mask` and can then build a `raster_cube`.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+assets = ["red","green","blue","nir","scl"]
+cube_all = stackstac.stack(
+    items,
+    assets=assets,
+    resolution=200,
+    bounds_latlon=bbox,
+    resampling=Resampling.bilinear
+)
+scl = cube_all.sel(band=["scl"])
+s2_mask = da.isin(scl, [3,8,9])
+cube = cube_all.where(~s2_mask)
+cube
+```
+
+## R
+
+```{r}
+assets = c("red","green","blue","nir","scl")
+col = stac_image_collection(items$features, asset_names = assets)
+extent = list(
+  t0 = time_extent[1], t1 = time_extent[2],
+  left = bbox["xmin"], bottom = bbox["ymin"], 
+  right = bbox["xmax"], top = bbox["ymax"]
+)
+view = cube_view(
+  srs = "epsg:32633",  
+  extent = extent,
+  dx = 200, dy = 200, dt = "P1D",
+  aggregation = "median",
+  resampling = "bilinear"
+)
+s2_mask = image_mask("scl", values = c(3,8,9))
+cube = raster_cube(col, view, mask = s2_mask)
+cube
+```
+:::
+
+And now we have a data cube! Let's so a simple reduction over time of our data to view an RGB composite.
+
+::: {.panel-tabset group="language"}
+## Python
+
+```{python}
+rgb = cube.sel(band=["red", "green", "blue"]).median("time", keep_attrs=True)
+rgb = rgb.compute()
+rgb.plot.imshow(
+    rgb="band",
+    robust=True
+)
+```
+
+## R
+
+```{r}
+gdalcubes_options(parallel = 4, cache = TRUE) 
+rgb = cube |> 
+    select_bands(c("blue","green","red")) |> 
+    reduce_time(c("median(blue)", "median(green)", "median(red)")) 
+rgb |> 
+    plot(rgb = 3:1) 
+```
+:::
+
+And there we have it, a side by side how-to create on-demand STAC data cubes. If you want to get more functionalities and examples on what can be done with the packages please refer to the materials of my lecture: [Tools and packages to query and process Sentinel-1 and Sentinel-2 data with R and Python](https://loreabad6.github.io/ogh23/).
+
+Happy STACing!

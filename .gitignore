@@ -6,3 +6,4 @@
 **/temp/
 /.quarto/
 **env/
+/_*.local
