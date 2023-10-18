@@ -24,6 +24,7 @@ website:
   twitter-card:
     creator: "@loreabad6"
     site: "@loreabad6"
+  open-graph: true
 
 format:
   html:
