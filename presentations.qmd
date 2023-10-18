@@ -8,6 +8,10 @@ Tools and packages to query and process Sentinel-1 and Sentinel-2 data with R an
 
 Open data and open science for risk, hazard and climate assessments. 30-08-2023. discussion Forum "What can R, Python, and Julia development communities do to combat the climate crisis?". OpenGeoHub Summer School Poznan 2023, Poznan, Poland. [Video](https://youtu.be/qiUh9WjozRA)
 
+Expert-based and data-driven gully and cliff erosion feature detection in New Zealand. 15-07-2023, 28th IUGG General Assembly, Berlin, Germany. [Abstract](https://doi.org/10.57757/IUGG23-0228) | [Poster](https://research.uni-salzburg.at/ws/portalfiles/portal/32837631/IUGG23_AbadL_Poster_BetterPortrait.pdf)
+
+Gully and cliff erosion feature detection in the Wairoa catchment in Hawke’s Bay, New Zealand. 26-04-2023, EGU General Assembly 2023, Vienna, Austria. [Abstract](https://doi.org/10.5194/egusphere-egu23-1468) | [Poster](https://uni-salzburg.elsevierpure.com/files/30166446/EGU23_AbadL_Poster_v2_compressed.pdf)
+
 ## 2022
 
 Mass movement susceptibility assessment of alpine infrastructure in the Salzkammergut area, Austria. 18-10-2022. Landslide Scientific Assessment Conference: Landslide hazard, (online). [Video](https://www.youtube.com/watch?v=96H3rLHHazo&ab_channel=LandScient)
@@ -20,7 +24,9 @@ Análisis de redes espaciales con `sfnetworks`. 17-08-2022. OceanHackWeek 2022 (
 
 Análisis de redes espaciales con `sfnetworks`. 08-06-2022. R-Ladies Guayaquil Meetup. Guayaquil, Ecuador (online). [Slides](https://sfnetworks.github.io/rladies-gye/slides) | [Video](https://www.youtube.com/watch?v=Av5lhO3Fero&ab_channel=R-LadiesEcuador)
 
-An open-source Python package for DEM generation and landslide volume estimation based on Sentinel-1 imagery. 24-05-2022. EGU General Assembly 2022, Vienna, Austria (online). [Abstract](https://meetingorganizer.copernicus.org/) | [Slides](https://presentations.copernicus.org/EGU22/EGU22-693_presentation-h520626.pdf)
+Exploring knowledge-based and data-driven approaches to map earthflow and gully erosion features in New Zealand. 27-05-2022. EGU General Assembly 2022, Vienna, Austria (online). [Abstract](https://doi.org/10.5194/egusphere-egu22-1013) 
+
+An open-source Python package for DEM generation and landslide volume estimation based on Sentinel-1 imagery. 24-05-2022. EGU General Assembly 2022, Vienna, Austria (online). [Abstract](https://doi.org/10.5194/egusphere-egu22-693) | [Slides](https://presentations.copernicus.org/EGU22/EGU22-693_presentation-h520626.pdf)
 
 ## 2021
 
@@ -38,11 +44,12 @@ Bicycle Network Analysis for assessing cyclability. 24-09-2020, Cycling Potentia
 
 El rol de las tecnologías geoespaciales para el mapeo y monitoreo de peligros naturales. 19-09-2020, Voces de la  Ingeniería Ambiental, Cuenca, Ecuador (online).  [Slides](https://loreabad6.github.io/VocesAmbiental/presentacion.html) | [Video](https://www.facebook.com/watch/live/?extid=MZJv41PQtCQ5l6jT&ref=watch_permalink&v=327432258323373)
 
-Tidy Geospatial Networks in R: Introducing the sfnetworks package. 16-06-2020. e-Rum2020 statellite event: Hackathon on Spatial Networks, (online). [Slides](https://www.youtube.com/watch?v=ZXTNXsvKYwo&ab_channel=RobinLovelace) | [Video](https://www.youtube.com/watch?v=ZXTNXsvKYwo&ab_channel=RobinLovelace)
+Implementing geo citizen science solutions: experiences from the citizenMorph project. 09-07-2020, GI_Forum 2020: connecting spatially – virtually, Salzburg, Austria (online).
+
+Tidy Geospatial Networks in R: Introducing the sfnetworks package. 16-06-2020. e-Rum2020 satellite event: Hackathon on Spatial Networks, (online). [Slides](https://www.youtube.com/watch?v=ZXTNXsvKYwo&ab_channel=RobinLovelace) | [Video](https://www.youtube.com/watch?v=ZXTNXsvKYwo&ab_channel=RobinLovelace)
 
 Mapping and monitoring of landslide-dammed lakes using Sentinel-2 time series. 07-05-2020. EGU General Assembly 2020, Vienna, Austria (online).
 [Abstract](https://meetingorganizer.copernicus.org/EGU2020/EGU2020-572.html) | [Slides](https://presentations.copernicus.org/EGU2020/EGU2020-572_presentation.pdf)
-
 
 ## 2018
 
