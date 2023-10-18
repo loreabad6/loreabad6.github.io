@@ -27,7 +27,7 @@ My lecture was on [Tools and packages to query and process Sentinel-1 and Sentin
 Why do I call it a quest? Well, it took me a while. Before this post, my website was based on `distill`, so the migration process from a `distill`-based website to a `quarto`-based one was the first task. Why did I have to do the migration? Because [Quarto](https://quarto.org/docs/websites/) allows the combination of two or more programming languages in a single file, crucial for data science across languages.
 
 ::: column-margin
-I managed to migrate thanks to the Quarto documentation and to posts from Danielle Navarro [@navarro2022]. Big thanks!
+I managed to migrate thanks to JaKub Nowosad's talk at OpenGeoHub23 [@nowosad2023], the Quarto documentation and to posts from Danielle Navarro [@navarro2022]. Big thanks!
 :::
 
 But in any case, I can now inaugurate my new website with a post on how to query STAC data and create on-demand data cubes with R and Python! So let's get to it.
