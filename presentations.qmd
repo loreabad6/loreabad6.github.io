@@ -6,7 +6,7 @@ title: "Presentations and Workshops"
 
 Tools and packages to query and process Sentinel-1 and Sentinel-2 data with R and Python. 31-08-2023. OpenGeoHub Summer School Poznan 2023, Poznan, Poland. [Material](https://loreabad6.github.io/ogh23/) | [Video Part 1](https://www.youtube.com/live/WRxmAhDEQFE?feature=shared) | [Video Part 2](https://www.youtube.com/live/a8X_jFN63Wc?feature=shared)
 
-Open data and open science for risk, hazard and climate assessments. 30-08-2023. discussion Forum "What can R, Python, and Julia development communities do to combat the climate crisis?". OpenGeoHub Summer School Poznan 2023, Poznan, Poland. [Video](https://youtu.be/qiUh9WjozRA)
+Open data and open science for risk, hazard and climate assessments. 30-08-2023. Discussion Forum "What can R, Python, and Julia development communities do to combat the climate crisis?". OpenGeoHub Summer School Poznan 2023, Poznan, Poland. [Video](https://youtu.be/qiUh9WjozRA)
 
 Expert-based and data-driven gully and cliff erosion feature detection in New Zealand. 15-07-2023, 28th IUGG General Assembly, Berlin, Germany. [Abstract](https://doi.org/10.57757/IUGG23-0228) | [Poster](https://research.uni-salzburg.at/ws/portalfiles/portal/32837631/IUGG23_AbadL_Poster_BetterPortrait.pdf)
 
@@ -16,7 +16,7 @@ Gully and cliff erosion feature detection in the Wairoa catchment in Hawke’s B
 
 Mass movement susceptibility assessment of alpine infrastructure in the Salzkammergut area, Austria. 18-10-2022. Landslide Scientific Assessment Conference: Landslide hazard, (online). [Video](https://www.youtube.com/watch?v=96H3rLHHazo&ab_channel=LandScient)
 
-SliDEM: An open-source-based workflow for DEM generation from Sentinel-1 for landslide volume estimation.26-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://drive.google.com/file/d/1tc5K_Rwd8wFz1pvrpZXZ7StEUtlCWMeJ/view)
+SliDEM: An open-source-based workflow for DEM generation from Sentinel-1 for landslide volume estimation. 26-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://drive.google.com/file/d/1tc5K_Rwd8wFz1pvrpZXZ7StEUtlCWMeJ/view)
 
 sfnetworks: Tidy Geospatial Networks in R. 22-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://sfnetworks.github.io/foss4g-workshop/slides/slides)
 
