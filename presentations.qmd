@@ -54,3 +54,6 @@ Mapping and monitoring of landslide-dammed lakes using Sentinel-2 time series. 0
 ## 2018
 
 Bike Network Analysis in Lisbon. 12-06-2018, Open Data for Open Cities v 2.0 - AGILE 2018 Workshop, Lund Sweden. [Slides](https://drive.google.com/file/d/1yBzFEb9vSe3ScHxAb-rcWuBYAPYDZpet/view?usp=sharing)
+
+## 2017
+Exploring Space-Time Patterns Of Volunteered Cycling Data In An Intermediate City. 11-11-2017, Geomundus 2017, Münster, Germany.

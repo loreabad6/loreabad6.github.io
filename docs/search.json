@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Notes and scribbles",
     "section": "",
-    "text": "STAC across Languages\n\n\n\n\n\n\n\nr-spatial\n\n\npython\n\n\nrstats\n\n\n\n\nSTAC on-demand data cubes with R and Python.\n\n\n\n\n\n\nOct 18, 2023\n\n\nLorena Abad\n\n\n\n\n\n\n  \n\n\n\n\nbetterposter at EGU 2023\n\n\n\n\n\n\n\nr-spatial\n\n\ndataviz\n\n\nscicomm\n\n\nrstats\n\n\n\n\nUsing posterdown to build better posters.\n\n\n\n\n\n\nApr 26, 2023\n\n\nLorena Abad\n\n\n\n\n\n\n  \n\n\n\n\n30DayMapChallenge & #RStats\n\n\n\n\n\n\n\nr-spatial\n\n\ndataviz\n\n\nrstats\n\n\n\n\nDay 30: Metamapping day\n\n\n\n\n\n\nNov 30, 2021\n\n\nLorena Abad\n\n\n\n\n\n\n  \n\n\n\n\nFOSS4G: R-Spatial Panel\n\n\n\n\n\n\n\nr-spatial\n\n\ndataviz\n\n\n\n\nI was invited to an R-Spatial Panel!\n\n\n\n\n\n\nNov 18, 2021\n\n\nLorena Abad\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial Network Visualization\n\n\n\n\n\n\n\nr-spatial\n\n\ndataviz\n\n\nnetworks\n\n\n\n\n{sfnetworks} meets {ggraph}\n\n\n\n\n\n\nMar 5, 2021\n\n\nLorena Abad\n\n\n\n\n\n\nNo matching items"
+    "text": "STAC across Languages\n\n\n\n\n\n\n\nr-spatial\n\n\npython\n\n\nrstats\n\n\n\n\nSTAC on-demand data cubes with R and Python.\n\n\n\n\n\n\nNov 16, 2023\n\n\nLorena Abad\n\n\n\n\n\n\n  \n\n\n\n\nbetterposter at EGU 2023\n\n\n\n\n\n\n\nr-spatial\n\n\ndataviz\n\n\nscicomm\n\n\nrstats\n\n\n\n\nUsing posterdown to build better posters.\n\n\n\n\n\n\nApr 26, 2023\n\n\nLorena Abad\n\n\n\n\n\n\n  \n\n\n\n\n30DayMapChallenge & #RStats\n\n\n\n\n\n\n\nr-spatial\n\n\ndataviz\n\n\nrstats\n\n\n\n\nDay 30: Metamapping day\n\n\n\n\n\n\nNov 30, 2021\n\n\nLorena Abad\n\n\n\n\n\n\n  \n\n\n\n\nFOSS4G: R-Spatial Panel\n\n\n\n\n\n\n\nr-spatial\n\n\ndataviz\n\n\n\n\nI was invited to an R-Spatial Panel!\n\n\n\n\n\n\nNov 18, 2021\n\n\nLorena Abad\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial Network Visualization\n\n\n\n\n\n\n\nr-spatial\n\n\ndataviz\n\n\nnetworks\n\n\n\n\n{sfnetworks} meets {ggraph}\n\n\n\n\n\n\nMar 5, 2021\n\n\nLorena Abad\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2021-03-05-geospatial-network-visualization/index.html",
@@ -152,5 +152,12 @@
     "title": "Presentations and Workshops",
     "section": "",
     "text": "Tools and packages to query and process Sentinel-1 and Sentinel-2 data with R and Python. 31-08-2023. OpenGeoHub Summer School Poznan 2023, Poznan, Poland. Material | Video Part 1 | Video Part 2\nOpen data and open science for risk, hazard and climate assessments. 30-08-2023. discussion Forum “What can R, Python, and Julia development communities do to combat the climate crisis?”. OpenGeoHub Summer School Poznan 2023, Poznan, Poland. Video\nExpert-based and data-driven gully and cliff erosion feature detection in New Zealand. 15-07-2023, 28th IUGG General Assembly, Berlin, Germany. Abstract | Poster\nGully and cliff erosion feature detection in the Wairoa catchment in Hawke’s Bay, New Zealand. 26-04-2023, EGU General Assembly 2023, Vienna, Austria. Abstract | Poster"
+  },
+  {
+    "objectID": "presentations.html#section-5",
+    "href": "presentations.html#section-5",
+    "title": "Presentations and Workshops",
+    "section": "2017",
+    "text": "2017\nExploring Space-Time Patterns Of Volunteered Cycling Data In An Intermediate City. 11-11-2017, Geomundus 2017, Münster, Germany."
   }
 ]
