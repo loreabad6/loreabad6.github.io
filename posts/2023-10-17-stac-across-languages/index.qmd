@@ -260,7 +260,7 @@ Now we can create our cube. The following code chunk has several steps depending
 
 1.  Define the assets we want.
 
-I selected RGB+NIR bands to illustrate this process, but of course we can set any other band. I included the \[SCL band\] (https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm-overview) which we will use to mask clouds.
+I selected RGB+NIR bands to illustrate this process, but of course we can set any other band. I included the [SCL band](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm-overview), which we will use to mask clouds.
 
 2.  Set-up the cube.
 
