@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.330">
+<meta name="generator" content="quarto-1.5.21">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2021-11-30">
 <meta name="description" content="Day 30: Metamapping day">
 
-<title>Lore Abad - #30DayMapChallenge &amp; #RStats</title>
+<title>Lore Abad – #30DayMapChallenge &amp; #RStats</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -51,7 +51,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -60,8 +66,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -70,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:title" content="Lore Abad - #30DayMapChallenge &amp; #RStats">
 <meta property="og:description" content="Day 30: Metamapping day">
 <meta property="og:image" content="figs/preview.png">
-<meta property="og:site-name" content="Lore Abad">
+<meta property="og:site_name" content="Lore Abad">
 <meta name="twitter:title" content="Lore Abad - #30DayMapChallenge &amp; #RStats">
 <meta name="twitter:description" content="Day 30: Metamapping day">
 <meta name="twitter:image" content="figs/preview.png">
@@ -82,10 +90,10 @@ ul.task-list li input[type="checkbox"] {
 <body class="floating nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Lore Abad</span>
     </a>
@@ -97,44 +105,44 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../presentations.html" rel="" target="">
- <span class="menu-text">Presentations</span></a>
+    <a class="nav-link" href="../../presentations.html"> 
+<span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://fosstodon.org/@loreabad6" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://fosstodon.org/@loreabad6"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/loreabad6" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/loreabad6"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/loreabad6" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/loreabad6"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://linkedin.com/in/lorena-abad/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://linkedin.com/in/lorena-abad/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -163,14 +171,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="quarto-title-meta-contents">
       <p class="author"><a href="https://loreabad6.github.io">Lorena Abad</a> <a href="https://orcid.org/0000-0003-0554-734X" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
     </div>
-      <div class="quarto-title-meta-contents">
+    <div class="quarto-title-meta-contents">
           <p class="affiliation">
               <a href="https://www.plus.ac.at/geoinformatik/?lang=en">
               University of Salzburg
               </a>
             </p>
         </div>
-      </div>
+    </div>
 
   <div class="quarto-title-meta">
 
@@ -188,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
@@ -213,12 +221,13 @@ ul.task-list li input[type="checkbox"] {
   </ul>
 </nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
 
 
 
@@ -276,8 +285,12 @@ ul.task-list li input[type="checkbox"] {
 <p>I managed to get all of the packages I used, per script. Next tasks: summarize by number of times I called each package, and assign them a category. You can see the code I used <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day30_meta.R">here</a>.</p>
 <p>The final result? The packages I used for each of my self-assigned categories and how many times I used them:</p>
 <div class="cell page-columns page-full">
-<div class="cell-output-display column-body-outset-left">
-<p><img src="https://raw.githubusercontent.com/loreabad6/30DayMapChallenge/main/figs/day30.png" class="img-fluid"></p>
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="https://raw.githubusercontent.com/loreabad6/30DayMapChallenge/main/figs/day30.png" class="img-fluid figure-img column-body-outset-left"></p>
+</figure>
+</div>
 </div>
 </div>
 <p><em>Insights:</em></p>
@@ -296,7 +309,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" height="80"></p>
+<div>
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/520851/34887433-ce1d130e-f7c6-11e7-83fc-d60ad4fae6bd.gif" height="80" class="figure-img img-fluid"></p>
+</figure>
+</div>
 </div>
 </div>
 </div></div><p>Take a look again at the plot above, which package stands out the most? Beautiful <strong><em>sf</em></strong>! Simple features came here to stay and I am very glad it exists. Working with spatial data in R has never been easier, and that is because of this awesome package. I used it to read spatial data into R, to work with projections and to perform spatial analyses like joins, generating random spatial points, etc.</p>
@@ -307,7 +324,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://raw.githubusercontent.com/tidyverse/dplyr/main/man/figures/logo.png" height="80"></p>
+<div>
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/tidyverse/dplyr/main/man/figures/logo.png" height="80" class="figure-img img-fluid"></p>
+</figure>
+</div>
 </div>
 </div>
 </div></div><p>The tidyverse has made working with data in R extremely intuitive. Being able to work with structured data frames brings data science to a new level. <strong><em>dplyr</em></strong> is the first tidyverse package I learnt and I use it constantly for tasks as filtering, selecting, mutating, etc.</p>
@@ -318,14 +339,18 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://github.com/tidyverse/ggplot2/raw/main/man/figures/logo.png" height="80"></p>
+<div>
+<figure class="figure">
+<p><img src="https://github.com/tidyverse/ggplot2/raw/main/man/figures/logo.png" height="80" class="figure-img img-fluid"></p>
+</figure>
+</div>
 </div>
 </div>
 </div></div><p>Another package of the tidyverse is <strong><em>ggplot2</em></strong>, which introduces the grammar of graphics into R and is extremely powerful to create awesome visualizations. Two main functions allow you to combine this package with spatial data: <code>geom_sf()</code> and <code>geom_stars()</code>. One interesting tip, if you learn to use <code>coord_sf()</code>, you can do things like assigning a CRS to your plot, although your data has a different projection, as <code>coord_sf(crs ="+proj=geos")</code></p>
 <p>This are the ggplot extensions I use the most:</p>
 <div class="cell">
 <div class="cell-output-display">
-
+<div>
 <div id="ghxhgnveod" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#ghxhgnveod table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -766,41 +791,67 @@ ul.task-list li input[type="checkbox"] {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  
-  <tbody class="gt_table_body">
-    <tr><td headers="extension" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://ggfx.data-imaginist.com/"><code>ggfx</code></a></p>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="extension"><div class="gt_from_md">
+<p><a href="https://ggfx.data-imaginist.com/"><code>ggfx</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left">To give shading and glow effects to spatial features</td>
-<td headers="hex" class="gt_row gt_left"><img src="https://github.com/thomasp85/ggfx/raw/main/man/figures/logo.png" style="height:50px;"></td></tr>
-    <tr><td headers="extension" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://wilkelab.org/ggtext/"><code>ggtext</code></a></p>
+<td class="gt_row gt_left" headers="usage">To give shading and glow effects to spatial features</td>
+<td class="gt_row gt_left" headers="hex"><img src="https://github.com/thomasp85/ggfx/raw/main/man/figures/logo.png" class="img-fluid" style="height:50px;"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="extension"><div class="gt_from_md">
+<p><a href="https://wilkelab.org/ggtext/"><code>ggtext</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left">To add special formatting to text</td>
-<td headers="hex" class="gt_row gt_left"><img src="" style="height:50px;"></td></tr>
-    <tr><td headers="extension" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://ggrepel.slowkow.com/"><code>gganimate</code></a></p>
+<td class="gt_row gt_left" headers="usage">To add special formatting to text</td>
+<td class="gt_row gt_left" headers="hex"><img src="" class="img-fluid" style="height:50px;"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="extension"><div class="gt_from_md">
+<p><a href="https://ggrepel.slowkow.com/"><code>gganimate</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left">To animate the plots</td>
-<td headers="hex" class="gt_row gt_left"><img src="https://raw.githubusercontent.com/thomasp85/gganimate/master/man/figures/logo.png" style="height:50px;"></td></tr>
-    <tr><td headers="extension" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://paleolimbot.github.io/ggspatial/"><code>ggspatial</code></a></p>
+<td class="gt_row gt_left" headers="usage">To animate the plots</td>
+<td class="gt_row gt_left" headers="hex"><img src="https://raw.githubusercontent.com/thomasp85/gganimate/master/man/figures/logo.png" class="img-fluid" style="height:50px;"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="extension"><div class="gt_from_md">
+<p><a href="https://paleolimbot.github.io/ggspatial/"><code>ggspatial</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left">To add north arrows and spatial scales</td>
-<td headers="hex" class="gt_row gt_left"><img src="" style="height:50px;"></td></tr>
-    <tr><td headers="extension" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://eliocamp.github.io/ggnewscale/"><code>ggnewscale</code></a></p>
+<td class="gt_row gt_left" headers="usage">To add north arrows and spatial scales</td>
+<td class="gt_row gt_left" headers="hex"><img src="" class="img-fluid" style="height:50px;"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="extension"><div class="gt_from_md">
+<p><a href="https://eliocamp.github.io/ggnewscale/"><code>ggnewscale</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left">To map multiple variables to the fill/color aesthetics</td>
-<td headers="hex" class="gt_row gt_left"><img src="https://github.com/eliocamp/ggnewscale/raw/master/man/figures/logo.png" style="height:50px;"></td></tr>
-    <tr><td headers="extension" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://github.com/GuangchuangYu/ggimage/"><code>ggimage</code></a></p>
+<td class="gt_row gt_left" headers="usage">To map multiple variables to the fill/color aesthetics</td>
+<td class="gt_row gt_left" headers="hex"><img src="https://github.com/eliocamp/ggnewscale/raw/master/man/figures/logo.png" class="img-fluid" style="height:50px;"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="extension"><div class="gt_from_md">
+<p><a href="https://github.com/GuangchuangYu/ggimage/"><code>ggimage</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left">To add images in spatial locations or as annotations</td>
-<td headers="hex" class="gt_row gt_left"><img src="" style="height:50px;"></td></tr>
-    <tr><td headers="extension" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://ggrepel.slowkow.com/"><code>ggrepel</code></a></p>
+<td class="gt_row gt_left" headers="usage">To add images in spatial locations or as annotations</td>
+<td class="gt_row gt_left" headers="hex"><img src="" class="img-fluid" style="height:50px;"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="extension"><div class="gt_from_md">
+<p><a href="https://ggrepel.slowkow.com/"><code>ggrepel</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left">To automatically place overlapping labels</td>
-<td headers="hex" class="gt_row gt_left"><img src="https://github.com/slowkow/ggrepel/raw/master/man/figures/logo.svg" style="height:50px;"></td></tr>
-  </tbody>
-  
-  
+<td class="gt_row gt_left" headers="usage">To automatically place overlapping labels</td>
+<td class="gt_row gt_left" headers="hex"><img src="https://github.com/slowkow/ggrepel/raw/master/man/figures/logo.svg" class="img-fluid" style="height:50px;"></td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -811,7 +862,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://raw.githubusercontent.com/ropensci/osmdata/main/man/figures/logo.png" width="75" height="80"></p>
+<div>
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/ropensci/osmdata/main/man/figures/logo.png" width="75" height="80" class="figure-img img-fluid"></p>
+</figure>
+</div>
 </div>
 </div>
 </div></div><p>This package is simply the easiest way I have come across in R to query OpenStreetMap data. I use it very often when I need to get data for small areas. For larger areas, for example a whole country, I use <a href="https://docs.ropensci.org/osmextract/"><code>osmextract</code></a>.</p>
@@ -822,7 +877,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://user-images.githubusercontent.com/3457131/78889069-479c5480-7a63-11ea-9d76-e8a0acc55c3f.png" height="80"></p>
+<div>
+<figure class="figure">
+<p><img src="https://user-images.githubusercontent.com/3457131/78889069-479c5480-7a63-11ea-9d76-e8a0acc55c3f.png" height="80" class="figure-img img-fluid"></p>
+</figure>
+</div>
 </div>
 </div>
 </div></div><p>Want to plot spatial features fast and easy, static and interactive? Use <strong><em>tmap</em></strong>! I use this package a lot for my scientific publications because it allows you to use raster RGB images and vector data really easy. To get a bit more creative it has some limitations, and that is why I did not use it as often as ggplot2 on this challenge. But, one of the main features I like about this one is the ability to call <code>tm_facets()</code> and get individual plots of features grouped by a category, and let scales x and y be free. This is not possible with ggplot2. See that in action on <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day22_boundaries.R">Day 22: Boundaries</a>.</p>
@@ -834,7 +893,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://github.com/thomasp85/scico/raw/main/man/figures/logo.png" height="80"></p>
+<div>
+<figure class="figure">
+<p><img src="https://github.com/thomasp85/scico/raw/main/man/figures/logo.png" height="80" class="figure-img img-fluid"></p>
+</figure>
+</div>
 </div>
 </div>
 </div></div><p><a href="https://www.fabiocrameri.ch/colourmaps/">Fabio Crameri</a> provided the whole scientific community a great set of scientific color palettes to fairly represent data that is universaly readable! <strong><em>scico</em></strong> allows you to use the palettes in R. Another great source of palettes is <a href="https://github.com/sjmgarnier/viridis">viridis</a>, which is already easily accessible in ggplot2 with <code>scale_*_viridis_*()</code>.</p>
@@ -853,7 +916,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Although not on the top 7 above, there are some packages that I use frequently, but were not so used for this challenge. There are also really cool packages that I only discovered in the past month. Here is a table of how I used them:</p>
 <div class="cell page-columns page-full">
 <div class="cell-output-display column-body-outset-left">
-
+<div>
 <div id="lxrgtmpvzz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#lxrgtmpvzz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -1294,58 +1357,85 @@ ul.task-list li input[type="checkbox"] {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" style="table-layout: fixed;" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <colgroup>
-    <col>
-    <col>
-    <col style="width:100px;">
-  </colgroup>
-  
-  <tbody class="gt_table_body">
-    <tr><td headers="pkg" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://luukvdmeer.github.io/sfnetworks/"><code>sfnetworks</code></a></p>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="pkg"><div class="gt_from_md">
+<p><a href="https://luukvdmeer.github.io/sfnetworks/"><code>sfnetworks</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left"><div class="gt_from_md"><p>OK, I am biased here, but have you checked out <code>sfnetworks</code> yet? Well, if you work with spatial networks you should. I used it to compute travel time using public transport in Quito for <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day09_monochrome.R">Day 9: Monochrome</a></p>
+<td class="gt_row gt_left" headers="usage"><div class="gt_from_md">
+<p>OK, I am biased here, but have you checked out <code>sfnetworks</code> yet? Well, if you work with spatial networks you should. I used it to compute travel time using public transport in Quito for <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day09_monochrome.R">Day 9: Monochrome</a></p>
 </div></td>
-<td headers="hex" class="gt_row gt_left"><img src="https://github.com/luukvdmeer/sfnetworks/raw/main/man/figures/logo.png" style="height:100px;"></td></tr>
-    <tr><td headers="pkg" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://r-spatial.github.io/rgee/"><code>rgee</code></a></p>
+<td class="gt_row gt_left" headers="hex"><img src="https://github.com/luukvdmeer/sfnetworks/raw/main/man/figures/logo.png" class="img-fluid" style="height:100px;"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="pkg"><div class="gt_from_md">
+<p><a href="https://r-spatial.github.io/rgee/"><code>rgee</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left"><div class="gt_from_md"><p>Do you work with Google Earth Engine? Do you want to do that via R? Then use <code>rgee</code>. I use it to extract RGB thumbnails of Sentinel-2 imagery. See the RGB collection for <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day06_red.R">Day 6</a>, <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day07_green.R">Day 7</a> and <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day08_blue.R">Day 8</a></p>
+<td class="gt_row gt_left" headers="usage"><div class="gt_from_md">
+<p>Do you work with Google Earth Engine? Do you want to do that via R? Then use <code>rgee</code>. I use it to extract RGB thumbnails of Sentinel-2 imagery. See the RGB collection for <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day06_red.R">Day 6</a>, <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day07_green.R">Day 7</a> and <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day08_blue.R">Day 8</a></p>
 </div></td>
-<td headers="hex" class="gt_row gt_left"><img src="https://raw.githubusercontent.com/r-spatial/rgee/master/man/figures/logo.png" style="height:100px;"></td></tr>
-    <tr><td headers="pkg" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://www.rayshader.com/"><code>rayshader</code></a></p>
+<td class="gt_row gt_left" headers="hex"><img src="https://raw.githubusercontent.com/r-spatial/rgee/master/man/figures/logo.png" class="img-fluid" style="height:100px;"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="pkg"><div class="gt_from_md">
+<p><a href="https://www.rayshader.com/"><code>rayshader</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left"><div class="gt_from_md"><p>For <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day11_3d.R">Day 11: 3D</a> I could not use any other package than rayshader. 3D rendering can get so creative with this package</p>
+<td class="gt_row gt_left" headers="usage"><div class="gt_from_md">
+<p>For <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day11_3d.R">Day 11: 3D</a> I could not use any other package than rayshader. 3D rendering can get so creative with this package</p>
 </div></td>
-<td headers="hex" class="gt_row gt_left"><img src="https://github.com/tylermorganwall/rayshader/raw/master/man/figures/raylogosmall.png" style="height:100px;"></td></tr>
-    <tr><td headers="pkg" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://haven.tidyverse.org/"><code>haven</code></a></p>
+<td class="gt_row gt_left" headers="hex"><img src="https://github.com/tylermorganwall/rayshader/raw/master/man/figures/raylogosmall.png" class="img-fluid" style="height:100px;"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="pkg"><div class="gt_from_md">
+<p><a href="https://haven.tidyverse.org/"><code>haven</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left"><div class="gt_from_md"><p>Open data can come in so many formats and with so many extensions. When I first saw a <code>.dta</code> or a <code>.sav</code> file I thought, OK now what? Luckily, <code>haven</code> was just there ready made for these cases!</p>
+<td class="gt_row gt_left" headers="usage"><div class="gt_from_md">
+<p>Open data can come in so many formats and with so many extensions. When I first saw a <code>.dta</code> or a <code>.sav</code> file I thought, OK now what? Luckily, <code>haven</code> was just there ready made for these cases!</p>
 </div></td>
-<td headers="hex" class="gt_row gt_left"><img src="https://github.com/tidyverse/haven/raw/main/man/figures/logo.png" style="height:100px;"></td></tr>
-    <tr><td headers="pkg" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://www.garrickadenbuie.com/project/ggpomological/"><code>ggpomological</code></a></p>
+<td class="gt_row gt_left" headers="hex"><img src="https://github.com/tidyverse/haven/raw/main/man/figures/logo.png" class="img-fluid" style="height:100px;"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="pkg"><div class="gt_from_md">
+<p><a href="https://www.garrickadenbuie.com/project/ggpomological/"><code>ggpomological</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left"><div class="gt_from_md"><p>For <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day24_historical.R">Day 24: Historical</a> I wanted to make a map with an old-style look. And there it was: <code>ggpomological</code>! I was very happy to run into this package</p>
+<td class="gt_row gt_left" headers="usage"><div class="gt_from_md">
+<p>For <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day24_historical.R">Day 24: Historical</a> I wanted to make a map with an old-style look. And there it was: <code>ggpomological</code>! I was very happy to run into this package</p>
 </div></td>
-<td headers="hex" class="gt_row gt_left"><img src="https://github.com/gadenbuie/ggpomological/raw/main/man/figures/ggpomological-1.png" style="height:100px;"></td></tr>
-    <tr><td headers="pkg" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://github.com/mnbram/gggibbous"><code>gggibbous</code></a></p>
+<td class="gt_row gt_left" headers="hex"><img src="https://github.com/gadenbuie/ggpomological/raw/main/man/figures/ggpomological-1.png" class="img-fluid" style="height:100px;"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="pkg"><div class="gt_from_md">
+<p><a href="https://github.com/mnbram/gggibbous"><code>gggibbous</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left"><div class="gt_from_md"><p>I had seen moon plots in other dataviz projects before but had never tried them myself. For <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day19_islands.R">Day 19: Island(s)</a> I finally got the chance!</p>
+<td class="gt_row gt_left" headers="usage"><div class="gt_from_md">
+<p>I had seen moon plots in other dataviz projects before but had never tried them myself. For <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day19_islands.R">Day 19: Island(s)</a> I finally got the chance!</p>
 </div></td>
-<td headers="hex" class="gt_row gt_left"><img src="https://cran.r-project.org/web/packages/gggibbous/readme/man/figures/gggibbous.png" style="height:100px;"></td></tr>
-    <tr><td headers="pkg" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://chris-prener.github.io/biscale/"><code>biscale</code></a></p>
+<td class="gt_row gt_left" headers="hex"><img src="https://cran.r-project.org/web/packages/gggibbous/readme/man/figures/gggibbous.png" class="img-fluid" style="height:100px;"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="pkg"><div class="gt_from_md">
+<p><a href="https://chris-prener.github.io/biscale/"><code>biscale</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left"><div class="gt_from_md"><p>I remember I made some bivariate choropleth maps once and it required a lot of code to achieve. <code>biscale</code> made it easy! I really wanted to flip the legend, and I managed so if you are interested, code is there. Featured on <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day26_choropleth.R">Day 26: Choropleth</a></p>
+<td class="gt_row gt_left" headers="usage"><div class="gt_from_md">
+<p>I remember I made some bivariate choropleth maps once and it required a lot of code to achieve. <code>biscale</code> made it easy! I really wanted to flip the legend, and I managed so if you are interested, code is there. Featured on <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day26_choropleth.R">Day 26: Choropleth</a></p>
 </div></td>
-<td headers="hex" class="gt_row gt_left"><img src="https://github.com/slu-openGIS/biscale/raw/main/man/figures/logo.png" style="height:100px;"></td></tr>
-    <tr><td headers="pkg" class="gt_row gt_left"><div class="gt_from_md"><p><a href="https://github.com/timelyportfolio/leaftime"><code>leaftime</code></a> &amp; <a href="https://rstudio.github.io/leaflet/"><code>leaflet</code></a></p>
+<td class="gt_row gt_left" headers="hex"><img src="https://github.com/slu-openGIS/biscale/raw/main/man/figures/logo.png" class="img-fluid" style="height:100px;"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="pkg"><div class="gt_from_md">
+<p><a href="https://github.com/timelyportfolio/leaftime"><code>leaftime</code></a> &amp; <a href="https://rstudio.github.io/leaflet/"><code>leaflet</code></a></p>
 </div></td>
-<td headers="usage" class="gt_row gt_left"><div class="gt_from_md"><p>I normally handle my interactive maps with <code>tmap</code> or <a href="https://r-spatial.github.io/mapview/"><code>mapview</code></a>, but this time I stubbornly wanted a time slider for my <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day25_interactive.R">Day 25: Interactive</a> map, hence I ended up learning a lot on hot to use leaflet and its addons</p>
+<td class="gt_row gt_left" headers="usage"><div class="gt_from_md">
+<p>I normally handle my interactive maps with <code>tmap</code> or <a href="https://r-spatial.github.io/mapview/"><code>mapview</code></a>, but this time I stubbornly wanted a time slider for my <a href="https://github.com/loreabad6/30DayMapChallenge/blob/main/scripts/day25_interactive.R">Day 25: Interactive</a> map, hence I ended up learning a lot on hot to use leaflet and its addons</p>
 </div></td>
-<td headers="hex" class="gt_row gt_left"><img src="" style="height:100px;"></td></tr>
-  </tbody>
-  
-  
+<td class="gt_row gt_left" headers="hex"><img src="" class="img-fluid" style="height:100px;"></td>
+</tr>
+</tbody>
 </table>
+
+</div>
 </div>
 </div>
 </div>
@@ -1369,7 +1459,7 @@ This a perfect example on how NOT to do a map in <a href="https://twitter.com/ha
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div id="quarto-reuse" class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></div></div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{abad2021,
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{abad2021,
   author = {Abad, Lorena},
   title = {\#30DayMapChallenge \&amp; {\#RStats}},
   date = {2021-11-30},
@@ -1420,6 +1510,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1488,13 +1605,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1573,10 +1692,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1586,8 +1722,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1599,7 +1744,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1643,6 +1911,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1668,6 +1937,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1728,6 +2023,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

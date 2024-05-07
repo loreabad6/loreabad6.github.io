@@ -2,6 +2,11 @@
 title: "Presentations and Workshops"
 ---
 
+## 2024
+Introduction to R for the Geosciences. 17.04.2024. Short Course, EGU General Assembly 2023, Vienna, Austria. [Website](https://meetingorganizer.copernicus.org/EGU24/session/49442) | [Material](https://loreabad6.github.io/egu24-sc-R4geosciences/)
+
+Geomorphic landform monitoring with raster and vector data cubes. 16-04-2024, EGU General Assembly 2024, Vienna, Austria. [Abstract](https://doi.org/10.5194/egusphere-egu24-10019) | [PDF Poster](https://research.uni-salzburg.at/ws/portalfiles/portal/35239558/EGU24_AbadL_Poster_BetterLandscape.pdf) | [HTML Poster](https://loreabad6.github.io/posters/EGU24/EGU24-poster-betterland.html)
+
 ## 2023
 
 Spatial Data Science across Languages (SDSL). 19-19.09.2023. Workshop organized by NFDI4Earth and ifgi, University of Munster,  Münster, Germany. [Website](https://r-spatial.org/sdsl/)
