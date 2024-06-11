@@ -3,7 +3,9 @@ title: "Presentations and Workshops"
 ---
 
 ## 2024
-Introduction to R for the Geosciences. 17.04.2024. Short Course, EGU General Assembly 2023, Vienna, Austria. [Website](https://meetingorganizer.copernicus.org/EGU24/session/49442) | [Material](https://loreabad6.github.io/egu24-sc-R4geosciences/)
+Vector data cubes for features evolving in space and time. 05.06.2024. Short Paper presentation, AGILE 2024, Glasgow, UK. [Slides](https://loreabad6.github.io/vdc-space-time-feats/presentation/agile24.html#/title-slide) | [Conference paper](https://doi.org/10.5194/agile-giss-5-16-2024) | [Reproducible code and showcase notebook](https://github.com/loreabad6/vdc-space-time-feats?tab=readme-ov-file)
+
+Introduction to R for the Geosciences. 17.04.2024. Short Course, EGU General Assembly 2024, Vienna, Austria. [Website](https://meetingorganizer.copernicus.org/EGU24/session/49442) | [Material](https://loreabad6.github.io/egu24-sc-R4geosciences/)
 
 Geomorphic landform monitoring with raster and vector data cubes. 16-04-2024, EGU General Assembly 2024, Vienna, Austria. [Abstract](https://doi.org/10.5194/egusphere-egu24-10019) | [PDF Poster](https://research.uni-salzburg.at/ws/portalfiles/portal/35239558/EGU24_AbadL_Poster_BetterLandscape.pdf) | [HTML Poster](https://loreabad6.github.io/posters/EGU24/EGU24-poster-betterland.html)
 
@@ -23,7 +25,7 @@ Gully and cliff erosion feature detection in the Wairoa catchment in Hawke’s B
 
 Mass movement susceptibility assessment of alpine infrastructure in the Salzkammergut area, Austria. 18-10-2022. Landslide Scientific Assessment Conference: Landslide hazard, (online). [Video](https://www.youtube.com/watch?v=96H3rLHHazo&ab_channel=LandScient)
 
-SliDEM: An open-source-based workflow for DEM generation from Sentinel-1 for landslide volume estimation. 26-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://drive.google.com/file/d/1tc5K_Rwd8wFz1pvrpZXZ7StEUtlCWMeJ/view)
+SliDEM: An open-source-based workflow for DEM generation from Sentinel-1 for landslide volume estimation. 26-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://drive.google.com/file/d/1tc5K_Rwd8wFz1pvrpZXZ7StEUtlCWMeJ/view) | [Conference paper](https://doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-5-2022) | [Software](https://github.com/SliDEM-project/SliDEM-python)
 
 sfnetworks: Tidy Geospatial Networks in R. 22-08-2022. FOSS4G 2022 - Workshop. Florence, Italy. [Slides](https://sfnetworks.github.io/foss4g-workshop/slides/slides)
 
