@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  post-render:
+    - scripts/move_slides.R
 
 website:
   favicon: "static/favicon.ico"
