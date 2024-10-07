@@ -7,6 +7,8 @@ title: "Presentations and Workshops"
 Vector data cubes for changing geometries. 18.09.2024. Spatial Data Science across Languages workshop. 2024, Prague, Czechia.
 [Slides](https://loreabad6.github.io/slides/sdsl-data-structures.html)
 
+Spatial Data Science across Languages (SDSL). 18-19.09.2024. Workshop, Charles University, Prague, Czechia. [Website](https://spatial-data-science.github.io/2024/)
+
 R for spatio-temporal handling of moving polygons. 10.07.2024. UseR! 2024, Salzburg, Austria. [Abstract](https://userconf2024.sched.com/event/1c8wq/poster-session-guided-tours-r-for-spatio-temporal-handling-of-moving-polygons-lorena-abad-university-of-salzburg) | [PDF Poster](https://loreabad6.github.io/posters/UseR24/useR2024_Abad.pdf)
 
 Vector data cubes for features evolving in space and time. 05.06.2024. Short Paper presentation, AGILE 2024, Glasgow, UK. [Slides](https://loreabad6.github.io/vdc-space-time-feats/presentation/agile24.html#/title-slide) | [Conference paper](https://doi.org/10.5194/agile-giss-5-16-2024) | [Reproducible code and showcase notebook](https://github.com/loreabad6/vdc-space-time-feats?tab=readme-ov-file)
@@ -17,7 +19,7 @@ Geomorphic landform monitoring with raster and vector data cubes. 16-04-2024, EG
 
 ## 2023
 
-Spatial Data Science across Languages (SDSL). 19-19.09.2023. Workshop organized by NFDI4Earth and ifgi, University of Munster,  Münster, Germany. [Website](https://r-spatial.org/sdsl/)
+Spatial Data Science across Languages (SDSL). 18-19.09.2023. Workshop organized by NFDI4Earth and ifgi, University of Munster,  Münster, Germany. [Website](https://r-spatial.org/sdsl/)
 
 Tools and packages to query and process Sentinel-1 and Sentinel-2 data with R and Python. 31-08-2023. OpenGeoHub Summer School Poznan 2023, Poznan, Poland. [Material](https://loreabad6.github.io/ogh23/) | [Video](https://doi.org/10.5446/63365)
 
