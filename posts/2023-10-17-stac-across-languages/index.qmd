@@ -2,7 +2,8 @@
 title: "STAC across Languages"
 description: |
   STAC on-demand data cubes with R and Python.
-date: today
+date: 17/10/2023
+date-modified: last-modified
 image: figs/thumbnail.png
 categories:
   - r-spatial
@@ -165,7 +166,7 @@ To explore the items as data frames we can either convert to a `geopandas` table
 ## Python
 
 ```{python}
-items_df = gpd.GeoDataFrame.from_features(items.to_dict(), crs="epsg:4326")
+items_df = gpd.GeoDataFrame.from_features(items.to_dict(), crs="EPSG:4326")
 items_df
 ```
 
