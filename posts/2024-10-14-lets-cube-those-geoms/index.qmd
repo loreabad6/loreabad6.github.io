@@ -2,14 +2,14 @@
 title: "Let's cube those geoms!"
 description: |
   Vector data cubes for multidimensional data.
-date: 14/10/2024
+date: 2024-10-14
 date-modified: last-modified
 image: figs/thumbnail.png
 categories:
   - r-spatial
   - rstats
 bibliography: https://api.citedrive.com/bib/618133a2-4856-443b-b778-a72d316eb599/references.bib?x=eyJpZCI6ICI2MTgxMzNhMi00ODU2LTQ0M2ItYjc3OC1hNzJkMzE2ZWI1OTkiLCAidXNlciI6ICIyNTY4IiwgInNpZ25hdHVyZSI6ICI4MWExNDU3ODE3NWUxMzFiZDI1NDliOTg2NmQzMWJjNzU4OWI4YjI3MDUxOTU5NDg3MDM5MzFlYmQwMDY0OThhIn0=/bibliography.bib
-draft: true
+draft: false
 editor_options: 
   chunk_output_type: console
 ---
