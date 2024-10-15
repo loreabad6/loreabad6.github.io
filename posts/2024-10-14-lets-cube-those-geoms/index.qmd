@@ -23,7 +23,7 @@ This post compliments the talk by writing out what I discussed during the semina
 
 Here are the slides of my talk today:
 
-<iframe width="580" height="400" src="https://loreabad6.github.io/slides/begin-vdcs.html" frameborder="0">
+<iframe width="620" height="390" src="https://loreabad6.github.io/slides/begin-vdcs.html" frameborder="0">
 <p>Your browser does not support iframes.</p>
 </iframe>
 
@@ -152,7 +152,7 @@ The openSenseMap project provides an API to query the information from the senso
 I queried the API to obtain some data from sensors close to the city where I am based, Salzburg.
 You can unfold the code below to see how I queried the API and pre-processed the data so that you know how to do this for other areas.
 However, I saved the result of the querying and pre-processing to avoid exhausting the API.
-The data is corpyrighted as © senseBox 2014 - 2020.
+The data is copyrighted as © senseBox 2014 - 2020.
 
 ```{r}
 #| eval: false
@@ -192,12 +192,14 @@ opensense = bind_rows(temperature_comp, pm10, pm25) |>
   ) |> 
   st_as_sf(coords = c("lon", "lat")) |> 
   st_set_crs(4326)
+write_sf("data/opensensemap.gpkg")
 ```
 
 To read in the saved data, we can use the `{sf}` package.
 
 ```{r}
 (opensense = read_sf("data/opensensemap.gpkg"))
+# (opensense = read_sf("posts/2024-10-14-lets-cube-those-geoms/data/opensensemap.gpkg"))
 ```
 
 As you can notice, the data has several data duplicates, since it is presented in a long format. 
@@ -207,6 +209,13 @@ Each station also has a `POINT` geometry and each measurement has its correspond
 The measured values (`arithmeticMean_1h`) are the only changing variables. 
 This value, as can be seen on the query code, is the arithmetic mean per hour of the observations for temperature, PM2.5 and PM10 for the sensors in the bounding box given.
 Not every sensor measures all the values and therefore there are `NA`s within the data. 
+
+```{r}
+sum(is.na(opensense$arithmeticMean_1h))
+```
+
+That is a lot of empty data!
+The reason to introduce so many NAs is that to create an array, we need that every dimension has an equal number of entries.
 
 ## Creating a VDC with `{stars}`
 
@@ -232,11 +241,25 @@ The `point` parameter indicates if the dimension has point support (`point = TRU
 ))
 ```
 
-<!-- add explanation on the dimensions object -->
+Take a moment to check the output of this `dimensions` object.
+We have established the semantics of the data array dimensions. 
+With this we guarantee that there are 7 stations and 50 timestamps. 
+The `geom` dimension, that contains the geometries of the 7 stations have a CRS (WGS84), have point support and we can see a glimpse of the `POINT` geometries under the values column.
+
+The `time` dimension on the other hand starts with index 1 and finishes at index 50.
+The offset indicated the first time index, while the delta contains the information on the frequency of the temporal data, in this case, 1 hour.
+We set this as a period, since it is an aggregation of all the values obtained in that hour.
+The values column is empty since the offset and delta can save all the needed information. 
+Don't worry your data is still there!
+
+```{r}
+st_get_dimension_values(d, "geom")
+st_get_dimension_values(d, "time")
+```
 
 Now, let's focus on the *array data*. 
 
-> "stars objects consist of a (possibly empty) named list of arrays, each having named dimensions (`dim`) attribute".
+> "`stars` objects consist of a (possibly empty) named list of arrays, each having named dimensions (`dim`) attribute".
 
 To create an array in R we need to establish the maximal indices in each dimension. 
 As we did above when building the `dimensions` object, we create now a vector with the dimensions in which we will arrange the array data. 
@@ -292,6 +315,24 @@ And with that, we can create our VDC using `{stars}`.
 ))
 ```
 
+Note how the units for each parameter are also recognized, and how we can get a quick glimpse of the summary statistics for each one.
+
+::: column-margin
+One thing I always find challenging is passing the arrays in the correct order. When building your own cube, make sure to double check that the original data is assigned to the correct dimensions!
+:::
+
+## Cube operations
+
+We can take a small peek at how the PM10 data looks like for example. 
+For this we can do some **subsetting** of our data cube using `[`. 
+
+The first element corresponds to the attributes, so here we call the PM10 attribute.
+The second element is the `geom` dimension. We want to keep all the stations, so we keep it as it is. 
+Finally, the last element is the time dimension. I took a subset from the first to the ninth hour (to avoid plotting 50 hours of data but also to show you how to subset 😉).
+
+::: column-margin
+You find here a glimpse of the operations you can run in a data cube with `{stars}`. Take a look at the [package vignettes](https://r-spatial.github.io/stars/articles/stars1.html#switching-attributes-to-dimensions-and-back) and the [Spatial Data Science book](https://r-spatial.org/book/06-Cubes.html#sec-dcoperations) for a more comprehensive overview.
+:::
 
 ```{r}
 #| column: page
@@ -301,15 +342,21 @@ And with that, we can create our VDC using `{stars}`.
 plot(opensense_stars["PM10",,1:9], pch = 16)
 ```
 
+Another interesting operation is to convert attributes to dimensions (with `merge()`) and vice-versa (with `split()`).
+This is helpful when specific subsetting over the dimension is desired, or if a function should be applied over set dimension. 
+
 ```{r}
 opensense_stars |> 
   drop_units() |> 
   merge(name = "parameter")
 ```
 
+Another strong operation in data cubes is the ability to aggregate dimensions to larger units, applying functions for this aggregation. 
+Here for instance, we aggregate the data to a daily mean.
+
 ```{r}
-opensense_daily = opensense_stars |> 
-  aggregate("1 day", mean, na.rm = TRUE)
+(opensense_daily = opensense_stars |> 
+  aggregate("1 day", mean, na.rm = TRUE))
 ```
 
 ```{r}
@@ -331,17 +378,62 @@ ggplot(drop_units(st_as_sf(opensense_daily, long = TRUE))) +
   theme_bw()
 ```
 
+Several other operations can be performed using vector data cubes. Check the annotations on the margins for more content!
+
 ## Converting to `{cubble}`
+
+We can directly convert our `stars` object into a `cubble`. 
+We will use a couple of tricks to do so.
+
+A `cubble` requires a `key` which is the spatial identifier, and an `index` which is the temporal identifier. 
+The `index` is quite straightforward since we can pass the time dimension directly.
+Passing a geometry as a `key`, however, is not well supported yet, and therefore we use the trick of calling an "id" dimension.
+This works because during coercion from a `stars` object `{cubble}` creates an internal id column to identify each spatial element.
+This might change, but for now it is the workaround we can take advantage of. 
 
 ```{r}
 opensense_cubble = opensense_stars |> 
   as_cubble(key = id, index = time)
 ```
 
+::: column-margin
+
+Learn more about [cubble data structure here](https://huizezhang-sherry.github.io/cubble/index.html#how-cubble-organises-spatio-temporal-data).
+
+![Spatiotemporal data structure in `{cubble}`](https://huizezhang-sherry.github.io/cubble/reference/figures/cubble-operations.png)
+:::
+
+`{cubble}` organizes spatiotemporal data in two faces, a nested cubble represents the temporal face, and a long cubble holds the time series.
+One can pivot back and forth from either face using the `face_spatial()` and `face_temporal()` functions.
+
 ```{r}
 opensense_cubble |> face_spatial()
 opensense_cubble |> face_temporal()
 ```
+
+One strong point for `{cubble}` when dealing with spatiotemporal data is that there is no need any more to have an even number of observations as with an array.
+
+If we create a `cubble` from our original opensense data, this becomes clearer:
+
+```{r}
+opensense |> 
+  drop_na(arithmeticMean_1h) |> 
+  select(-unit) |> 
+  pivot_wider(names_from = phenomenon, values_from = arithmeticMean_1h) |> 
+  as_cubble(key = boxName, index = time_start)
+```
+
+Note the information under the `ts` column. You can now see there that the number of observations logged for each station is unequal.
+
+`cubble` has many interesting functions, but one of the highlights for me is the ability to create glyph maps. 
+A glyph map allows you to understand the temporal dynamics of your data, while also considering their location in space. 
+
+::: column-margin
+
+![](https://huizezhang-sherry.github.io/cubble/reference/figures/logo.svg)
+
+Check out more about this really interesting package and follow its development here: <https://huizezhang-sherry.github.io/cubble/>
+:::
 
 ```{r}
 #| code-fold: true
@@ -374,3 +466,52 @@ ggplot(opensense_unf) +
 
 # VDCs for dynamic spatial data
 
+The reason why I got so interested in VDCs was because I work often with SITS. 
+A lot of the work we do at my research groups ([Risk, Hazard & Climate](https://www.plus.ac.at/geoinformatik/research/research-areas/risk-hazard-climate/?lang=en) and [EO-Analytics](https://www.plus.ac.at/geoinformatik/research/research-areas/eo-analytics/?lang=en)) is to map natural hazards to monitor their evolution using Earth observation (EO) data cubes.
+This mapping often results in vector delineations derived from EO data.
+They are spatio-temporal in essence but once the delineation was finished, the nice properties of data cubes.
+
+Then I realized that vector data cubes could be a potential way to organize these "dynamic spatial data".
+VDCs are meant to work with vector geometries but the big challenge here was that unlike weather stations, my geometries where evolving over time.
+Moreover, the way the geometries evolve is important and it is necessary to keep that complex polygon structure within the analysis. 
+
+That is how I ended up coming with the concept of summary geometries and with the decision to add the changing geometries as elements of the array.
+
+::: column-margin
+Learn more about the concept of summary geometries in the [package vignette](https://loreabad6.github.io/post/articles/post02_geomsum.html).
+:::
+
+::: {layout="[65,35]" layout-valign="bottom"}
+
+![](https://loreabad6.github.io/post/articles/figs/geoms-complete-post.png)
+
+![](https://loreabad6.github.io/post/articles/figs/geom_sum-post.png)
+:::
+
+Although relatively straightforward, setting up vector data cubes both in `{stars}` and `{cubble}` that support dynamic spatial data required the creation of new classes and methods that could easily support this *special* data structure.
+
+That is how [`{post}`](https://loreabad6.github.io/post/) started. It stands for Polygon changes in Space and Time and its main goal is "to provide array and tabular vector data cube structures to organise and analyse polygons that change their shape in space and time".
+
+::: column-margin
+
+![A new package is born! 📦](https://loreabad6.github.io/post/reference/figures/hexlogo.png)
+:::
+
+The package is still work in progress but it already has a website and some basic documentation on its main functionalities. 
+The next step for me is to work on raster to vector data cube aggregations considering the dynamic nature of the data. 
+You can follow documentation of [that particular issue here](https://github.com/loreabad6/post/issues/1).
+
+I will be writing more posts on how I use `{post}` in my work and of the new features I am planning to implement.
+I hope this gives you a bit of curiosity and if you want, test the package already and let me know what you think!
+
+Thanks for reading this post and attending the talk if you did! Until next time!
+
+
+<details>
+
+<summary>Session info</summary>
+
+```{r}
+sessioninfo::session_info()
+```
+</details>
