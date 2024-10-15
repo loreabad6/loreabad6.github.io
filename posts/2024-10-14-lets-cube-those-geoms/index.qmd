@@ -4,7 +4,7 @@ description: |
   Vector data cubes for multidimensional data.
 date: 14/10/2024
 date-modified: last-modified
-# image: figs/thumbnail.png
+image: figs/thumbnail.png
 categories:
   - r-spatial
   - rstats
