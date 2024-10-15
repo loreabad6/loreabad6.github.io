@@ -2,8 +2,7 @@
 title: "STAC across Languages"
 description: |
   STAC on-demand data cubes with R and Python.
-date: 17/10/2023
-date-modified: last-modified
+date: 2023-10-17
 image: figs/thumbnail.png
 categories:
   - r-spatial

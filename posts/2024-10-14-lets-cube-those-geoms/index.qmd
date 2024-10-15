@@ -3,7 +3,6 @@ title: "Let's cube those geoms!"
 description: |
   Vector data cubes for multidimensional data.
 date: 2024-10-14
-date-modified: last-modified
 image: figs/thumbnail.png
 categories:
   - r-spatial
@@ -23,7 +22,7 @@ This post compliments the talk by writing out what I discussed during the semina
 
 Here are the slides of my talk today:
 
-<iframe width="620" height="390" src="https://loreabad6.github.io/slides/begin-vdcs.html" frameborder="0">
+<iframe width="580" height="390" src="https://loreabad6.github.io/slides/begin-vdcs.html" frameborder="0">
 <p>Your browser does not support iframes.</p>
 </iframe>
 
