@@ -23,7 +23,7 @@ This post compliments the talk by writing out what I discussed during the semina
 
 Here are the slides of my talk today:
 
-<iframe width="580" height="400" src="https://loreabad6.github.io/slides/slides-vdcs.html" frameborder="0">
+<iframe width="580" height="400" src="https://loreabad6.github.io/slides/begin-vdcs.html" frameborder="0">
 <p>Your browser does not support iframes.</p>
 </iframe>
 
@@ -371,3 +371,6 @@ ggplot(opensense_unf) +
   scale_color_viridis_c() +
   theme_bw()
 ```
+
+# VDCs for dynamic spatial data
+
