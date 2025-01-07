@@ -13,9 +13,9 @@ about:
     - icon: 'linkedin'
       text: 'LinkedIn'
       href: "https://linkedin.com/in/lorena-abad/"
-    - icon: 'google'
+    - icon: 'outlook'
       text: 'Meet me'
-      href: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ082mdNhUYWD11jgoByU9L7JA57pUO4Nex23Cv6atVOnsmrZgwnmoDR04Hf93VPtln6EouQSkjf?gv=true"
+      href: "https://outlook.office.com/bookwithme/user/5edd6ea20ab443ed98d843c0da618b2f%40plus.ac.at?anonymous&isanonymous=true"
 ---
 
 I am a researcher with a background in environmental engineering and geospatial technologies. R is my go-to coding language for data science and visualization as well as scientific report and article writing. This blog is meant to share some tip and tricks I have learned along the way. You can reach me at any of the links below!
