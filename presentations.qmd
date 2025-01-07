@@ -4,7 +4,9 @@ title: "Presentations and Workshops"
 
 ## 2024
 
-Vector data cubes for changing geometries. 18.09.2024. Spatial Data Science across Languages workshop. 2024, Prague, Czechia.
+Exploring data cubes for vector geometries in R. 14.10.2024. BEGIN seminar series. University of St. Andrews, UK. (online) [Abstract](https://begin.wp.st-andrews.ac.uk/2024/09/26/begin-seminar-dr-lorena-cristina-abad-crespo/) | [Slides](https://loreabad6.github.io/slides/begin-vdcs.html#/title-slide)
+
+Vector data cubes for changing geometries. 18.09.2024. Spatial Data Science across Languages workshop - 2024, Prague, Czechia.
 [Slides](https://loreabad6.github.io/slides/sdsl-data-structures.html)
 
 Spatial Data Science across Languages (SDSL). 18-19.09.2024. Workshop, Charles University, Prague, Czechia. [Website](https://spatial-data-science.github.io/2024/)
