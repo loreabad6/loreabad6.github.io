@@ -13,6 +13,8 @@ website:
         text: Posts
       - href: presentations.qmd
         text: Presentations
+      - href: https://loreabad6.github.io/R-CV/CV.pdf
+        text: CV
       - about.qmd
     right:
       - icon: 'mastodon'
